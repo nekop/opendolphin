@@ -10,14 +10,14 @@ import open.dolphin.session.*;
 public final class EJBLocator {
 
     //----------------------------------------------------------------------------------------
-    private static final String USER_SERVICE    = "OpenDolphin-EA-2.0/UserServiceBean/local";
-    private static final String STAMP_SERVICE   = "OpenDolphin-EA-2.0/StampServiceBean/local";
-    private static final String PVT_SERVICE     = "OpenDolphin-EA-2.0/PVTServiceBean/local";
-    private static final String PATIENT_SERVICE = "OpenDolphin-EA-2.0/PatientServiceBean/local";
-    private static final String KARTE_SERVICE   = "OpenDolphin-EA-2.0/KarteServiceBean/local";
-    private static final String NLAB_SERVICE    = "OpenDolphin-EA-2.0/NLabServiceBean/local";
-    private static final String APPO_SERVICE    = "OpenDolphin-EA-2.0/AppoServiceBean/local";
-    private static final String LETTER_SERVICE  = "OpenDolphin-EA-2.0/LetterServiceBean/local";
+    private static final String USER_SERVICE    = "java:module/UserServiceBean";
+    private static final String STAMP_SERVICE   = "java:module/StampServiceBean";
+    private static final String PVT_SERVICE     = "java:module/PVTServiceBean";
+    private static final String PATIENT_SERVICE = "java:module/PatientServiceBean";
+    private static final String KARTE_SERVICE   = "java:module/KarteServiceBean";
+    private static final String NLAB_SERVICE    = "java:module/NLabServiceBean";
+    private static final String APPO_SERVICE    = "java:module/AppoServiceBean";
+    private static final String LETTER_SERVICE  = "java:module/LetterServiceBean";
     //----------------------------------------------------------------------------------------
     
     private static UserServiceBeanLocal userServiceBeanLocal;

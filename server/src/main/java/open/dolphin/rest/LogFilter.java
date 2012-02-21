@@ -26,8 +26,7 @@ public final class LogFilter implements Filter {
     public void init(FilterConfig filterConfig) throws ServletException {
 
         try {
-            InitialContext ic = new InitialContext();
-            userService = (UserServiceBeanLocal) ic.lookup("OpenDolphin-EA-2.0/UserServiceBean/local");
+            userService = EJBLocator.getUserServiceBean();
         } catch (Exception e) {
             e.printStackTrace(System.err);
         }
