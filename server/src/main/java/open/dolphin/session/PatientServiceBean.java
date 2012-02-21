@@ -44,7 +44,7 @@ public class PatientServiceBean implements PatientServiceBeanLocal {
                 .setParameter(NAME, name + PERCENT)
                 .getResultList();
 
-        // Œã•ûˆê’vŒŸõ‚ğs‚¤
+        // å¾Œæ–¹ä¸€è‡´æ¤œç´¢ã‚’è¡Œã†
         if (ret.isEmpty()) {
             ret = em.createQuery(QUERY_PATIENT_BY_NAME)
                 .setParameter(FID, fid)
@@ -57,7 +57,7 @@ public class PatientServiceBean implements PatientServiceBeanLocal {
 
             for (PatientModel patient : ret) {
 
-                // Š³Ò‚ÌŒ’N•ÛŒ¯‚ğæ“¾‚·‚é
+                // æ‚£è€…ã®å¥åº·ä¿é™ºã‚’å–å¾—ã™ã‚‹
                 List<HealthInsuranceModel> insurances
                         = (List<HealthInsuranceModel>)em.createQuery(QUERY_INSURANCE_BY_PATIENT_PK)
                         .setParameter(PK, patient.getId()).getResultList();
@@ -89,7 +89,7 @@ public class PatientServiceBean implements PatientServiceBeanLocal {
 
             for (PatientModel patient : ret) {
 
-                // Š³Ò‚ÌŒ’N•ÛŒ¯‚ğæ“¾‚·‚é
+                // æ‚£è€…ã®å¥åº·ä¿é™ºã‚’å–å¾—ã™ã‚‹
                 List<HealthInsuranceModel> insurances
                         = (List<HealthInsuranceModel>)em.createQuery(QUERY_INSURANCE_BY_PATIENT_PK)
                         .setParameter(PK, patient.getId()).getResultList();
@@ -128,7 +128,7 @@ public class PatientServiceBean implements PatientServiceBeanLocal {
 
             for (PatientModel patient : ret) {
 
-                // Š³Ò‚ÌŒ’N•ÛŒ¯‚ğæ“¾‚·‚é
+                // æ‚£è€…ã®å¥åº·ä¿é™ºã‚’å–å¾—ã™ã‚‹
                 List<HealthInsuranceModel> insurances
                         = (List<HealthInsuranceModel>)em.createQuery(QUERY_INSURANCE_BY_PATIENT_PK)
                         .setParameter(PK, patient.getId()).getResultList();
@@ -164,15 +164,15 @@ public class PatientServiceBean implements PatientServiceBeanLocal {
     }
 
     /**
-     * Š³ÒID(BUSINESS KEY)‚ğw’è‚µ‚ÄŠ³ÒƒIƒuƒWƒFƒNƒg‚ğ•Ô‚·B
+     * æ‚£è€…ID(BUSINESS KEY)ã‚’æŒ‡å®šã—ã¦æ‚£è€…ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’è¿”ã™ã€‚
      *
-     * @param patientId {İ“àŠ³ÒID
-     * @return ŠY“–‚·‚éPatientModel
+     * @param patientId æ–½è¨­å†…æ‚£è€…ID
+     * @return è©²å½“ã™ã‚‹PatientModel
      */
     @Override
     public PatientModel getPatientById(String fid,String pid) {
 
-        // Š³ÒƒŒƒR[ƒh‚Í FacilityId ‚Æ patientId ‚Å•¡‡ƒL[‚É‚È‚Á‚Ä‚¢‚é
+        // æ‚£è€…ãƒ¬ã‚³ãƒ¼ãƒ‰ã¯ FacilityId ã¨ patientId ã§è¤‡åˆã‚­ãƒ¼ã«ãªã£ã¦ã„ã‚‹
         PatientModel bean
                 = (PatientModel)em.createQuery(QUERY_PATIENT_BY_FID_PID)
                 .setParameter(FID, fid)
@@ -181,8 +181,8 @@ public class PatientServiceBean implements PatientServiceBeanLocal {
 
         long pk = bean.getId();
 
-        // Lazy Fetch ‚Ì Šî–{‘®«‚ğŒŸõ‚·‚é
-        // Š³Ò‚ÌŒ’N•ÛŒ¯‚ğæ“¾‚·‚é
+        // Lazy Fetch ã® åŸºæœ¬å±æ€§ã‚’æ¤œç´¢ã™ã‚‹
+        // æ‚£è€…ã®å¥åº·ä¿é™ºã‚’å–å¾—ã™ã‚‹
         List<HealthInsuranceModel> insurances
                 = (List<HealthInsuranceModel>)em.createQuery(QUERY_INSURANCE_BY_PATIENT_PK)
                 .setParameter(PK, pk).getResultList();
@@ -192,9 +192,9 @@ public class PatientServiceBean implements PatientServiceBeanLocal {
     }
 
     /**
-     * Š³Ò‚ğ“o˜^‚·‚éB
+     * æ‚£è€…ã‚’ç™»éŒ²ã™ã‚‹ã€‚
      * @param patient PatientModel
-     * @return ƒf[ƒ^ƒx[ƒX Primary Key
+     * @return ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ Primary Key
      */
     @Override
     public long addPatient(PatientModel patient) {
@@ -204,9 +204,9 @@ public class PatientServiceBean implements PatientServiceBeanLocal {
     }
 
     /**
-     * Š³Òî•ñ‚ğXV‚·‚éB
-     * @param patient XV‚·‚éŠ³Ò
-     * @return XV”
+     * æ‚£è€…æƒ…å ±ã‚’æ›´æ–°ã™ã‚‹ã€‚
+     * @param patient æ›´æ–°ã™ã‚‹æ‚£è€…
+     * @return æ›´æ–°æ•°
      */
     @Override
     public int update(PatientModel patient) {

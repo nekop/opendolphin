@@ -23,7 +23,7 @@ import javax.persistence.Embeddable;
 import javax.persistence.Transient;
 
 /**
- * ŠO•”QÆ—v‘fƒNƒ‰ƒXB
+ * å¤–éƒ¨å‚ç…§è¦ç´ ã‚¯ãƒ©ã‚¹ã€‚
  *
  * @author  Kazushi Minagawa, Digital Globe, Inc.
  */
@@ -53,7 +53,7 @@ public class ExtRefModel extends InfoModel implements java.io.Serializable {
 
     //private String facilityId;
     
-    /** ƒfƒtƒHƒ‹ƒgƒRƒ“ƒXƒgƒ‰ƒNƒ^ */
+    /** ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ */
     public ExtRefModel() {
     }
     

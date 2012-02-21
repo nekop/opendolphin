@@ -102,49 +102,49 @@ public class PVTPublicInsuranceItemModel extends InfoModel {
 
         sb.append("<mmlHi:publicInsuranceItem ");
 
-        // Œö”ï‚Ì—Dæ‡ˆÊ attribute
+        // å…¬è²»ã®å„ªå…ˆé †ä½ attribute
         if (getPriority()!=null) {
             sb.append("mmlHi:priority=");
             sb.append(addQuote(getPriority()));
             sb.append(">");
         }
 
-        // Œö”ï•‰’S–¼Ì ?
+        // å…¬è²»è² æ‹…åç§° ?
         if (getProviderName()!=null) {
             sb.append("<mmlHi:providerName>");
             sb.append(getProviderName());
             sb.append("</mmlHi:providerName>");
         }
 
-        // •‰’SÒ”Ô†
+        // è² æ‹…è€…ç•ªå·
         if (getProvider()!=null) {
             sb.append("<mmlHi:provider>");
             sb.append(getProvider());
             sb.append("</mmlHi:provider>");
         }
 
-        // ó‹‹Ò”Ô†
+        // å—çµ¦è€…ç•ªå·
         if (getRecipient()!=null) {
             sb.append("<mmlHi:recipient>");
             sb.append(getRecipient());
             sb.append("</mmlHi:recipient>");
         }
 
-        // ŠJn“ú
+        // é–‹å§‹æ—¥
         if (getStartDate()!=null) {
             sb.append("<mmlHi:startDate>");
             sb.append(getStartDate());
             sb.append("</mmlHi:startDate>");
         }
 
-        // —LŒøŠúŒÀ
+        // æœ‰åŠ¹æœŸé™
         if (getExpiredDate()!=null) {
             sb.append("<mmlHi:expiredDate>");
             sb.append(getExpiredDate());
             sb.append("</mmlHi:expiredDate>");
         }
 
-        // •‰’S—¦ ?
+        // è² æ‹…ç‡ ?
         if (getPaymentRatio()!=null && getPaymentRatioType()!=null) {
             sb.append("<mmlHi:paymentRatio mmlHi:RatioType=");
             sb.append(addQuote(getPaymentRatioType()));

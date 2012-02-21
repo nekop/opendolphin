@@ -124,34 +124,34 @@ public class KarteBean extends InfoModel implements java.io.Serializable {
     }
     
 //    /**
-//     * ƒJƒ‹ƒe‚ÌƒGƒ“ƒgƒŠ‚ğ•Ô‚·B
-//     * @return ƒJƒeƒSƒŠ‚ğKeyAƒGƒ“ƒgƒŠ‚ÌƒRƒŒƒNƒVƒ‡ƒ“‚ğValue‚É‚µ‚½HashMap
+//     * ã‚«ãƒ«ãƒ†ã®ã‚¨ãƒ³ãƒˆãƒªã‚’è¿”ã™ã€‚
+//     * @return ã‚«ãƒ†ã‚´ãƒªã‚’Keyã€ã‚¨ãƒ³ãƒˆãƒªã®ã‚³ãƒ¬ã‚¯ã‚·ãƒ§ãƒ³ã‚’Valueã«ã—ãŸHashMap
 //     */
 //    public Map<String, List> getEntries() {
 //        return entries;
 //    }
 //
 //    /**
-//     * ƒJƒ‹ƒe‚ÌƒGƒ“ƒgƒŠ‚ğİ’è‚·‚éB
-//     * param entries ƒJƒeƒSƒŠ‚ğKeyAƒGƒ“ƒgƒŠ‚ÌƒRƒŒƒNƒVƒ‡ƒ“‚ğValue‚É‚µ‚½HashMap
+//     * ã‚«ãƒ«ãƒ†ã®ã‚¨ãƒ³ãƒˆãƒªã‚’è¨­å®šã™ã‚‹ã€‚
+//     * param entries ã‚«ãƒ†ã‚´ãƒªã‚’Keyã€ã‚¨ãƒ³ãƒˆãƒªã®ã‚³ãƒ¬ã‚¯ã‚·ãƒ§ãƒ³ã‚’Valueã«ã—ãŸHashMap
 //     */
 //    public void setEntries(Map<String, List> entries) {
 //        this.entries = entries;
 //    }
 //
 //    /**
-//     * w’è‚µ‚½ƒJƒeƒSƒŠ‚ÌƒGƒ“ƒgƒŠƒRƒŒƒNƒVƒ‡ƒ“‚ğ•Ô‚·B
-//     * @param category ƒJƒeƒSƒŠ
-//     * @return@ƒGƒ“ƒgƒŠ‚ÌƒRƒŒƒNƒVƒ‡ƒ“
+//     * æŒ‡å®šã—ãŸã‚«ãƒ†ã‚´ãƒªã®ã‚¨ãƒ³ãƒˆãƒªã‚³ãƒ¬ã‚¯ã‚·ãƒ§ãƒ³ã‚’è¿”ã™ã€‚
+//     * @param category ã‚«ãƒ†ã‚´ãƒª
+//     * @returnã€€ã‚¨ãƒ³ãƒˆãƒªã®ã‚³ãƒ¬ã‚¯ã‚·ãƒ§ãƒ³
 //     */
 //    public List getEntryCollection(String category) {
 //        return entries != null ? entries.get(category) : null;
 //    }
 //
 //    /**
-//     * ƒJƒeƒSƒŠ‚Æ‚»‚ÌƒGƒ“ƒgƒŠ‚ÌƒRƒŒƒNƒVƒ‡ƒ“‚ğ’Ç‰Á‚·‚éB
-//     * @param category ƒJƒeƒSƒŠ
-//     * @param entries ƒJƒeƒSƒŠ‚ÌƒGƒ“ƒgƒŠ[‚ÌƒRƒŒƒNƒVƒ‡ƒ“
+//     * ã‚«ãƒ†ã‚´ãƒªã¨ãã®ã‚¨ãƒ³ãƒˆãƒªã®ã‚³ãƒ¬ã‚¯ã‚·ãƒ§ãƒ³ã‚’è¿½åŠ ã™ã‚‹ã€‚
+//     * @param category ã‚«ãƒ†ã‚´ãƒª
+//     * @param entries ã‚«ãƒ†ã‚´ãƒªã®ã‚¨ãƒ³ãƒˆãƒªãƒ¼ã®ã‚³ãƒ¬ã‚¯ã‚·ãƒ§ãƒ³
 //     */
 //    public void addEntryCollection(String category, List entrs) {
 //

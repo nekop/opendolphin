@@ -3,7 +3,7 @@ package open.dolphin.infomodel;
 import javax.persistence.*;
 
 /**
- * Ğ‰îóƒ‚ƒfƒ‹B
+ * ç´¹ä»‹çŠ¶ãƒ¢ãƒ‡ãƒ«ã€‚
  */
 @Entity
 @Inheritance(strategy=InheritanceType.SINGLE_TABLE)
@@ -15,7 +15,7 @@ import javax.persistence.*;
 @Table(name = "d_letter")
 public class LetterModel extends KarteEntryBean implements java.io.Serializable {
     
-    //@Lob // OpenDolphin-1.4 ‚Å‚Í‚±‚ÌƒAƒmƒe[ƒVƒ‡ƒ“‚È‚µ
+    //@Lob // OpenDolphin-1.4 ã§ã¯ã“ã®ã‚¢ãƒãƒ†ãƒ¼ã‚·ãƒ§ãƒ³ãªã—
     @Column(nullable=false)
     private byte[] beanBytes;
     

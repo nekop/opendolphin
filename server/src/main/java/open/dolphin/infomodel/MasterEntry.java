@@ -154,16 +154,16 @@ public class MasterEntry extends InfoModel implements java.lang.Comparable {
     
     protected int getUseState(String startDate, String endDate) {
         
-        // —LŒøŠúŒÀ‘O
+        // æœ‰åŠ¹æœŸé™å‰
         if (startDate != null && refDate.compareTo(startDate) < 0) {
             return 0;
             
-            // —LŒøŠúŒÀŒã
+            // æœ‰åŠ¹æœŸé™å¾Œ
         } else if (endDate != null && refDate.compareTo(endDate) > 0) {
             return 2;
         }
         
-        // —LŒøŠúŒÀ“à
+        // æœ‰åŠ¹æœŸé™å†…
         return 1;
     }
     

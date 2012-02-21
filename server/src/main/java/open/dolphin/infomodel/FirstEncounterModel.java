@@ -3,7 +3,7 @@ package open.dolphin.infomodel;
 import javax.persistence.*;
 
 /**
- * ‰fî•ñƒNƒ‰ƒXB
+ * åˆè¨ºæ™‚æƒ…å ±ã‚¯ãƒ©ã‚¹ã€‚
  */
 @Entity
 @Inheritance(strategy=InheritanceType.SINGLE_TABLE)
@@ -14,7 +14,7 @@ import javax.persistence.*;
 @Table(name = "d_first_encounter")
 public class FirstEncounterModel extends KarteEntryBean implements java.io.Serializable {
         
-    //@Lob ASP ƒT[ƒo‚Ö”z”õ‚·‚éAƒRƒƒ“ƒgƒAƒEƒg‚µ‚Ä‚Í‚¢‚¯‚È‚¢
+    //@Lob ASP ã‚µãƒ¼ãƒã¸é…å‚™ã™ã‚‹æ™‚ã€ã‚³ãƒ¡ãƒ³ãƒˆã‚¢ã‚¦ãƒˆã—ã¦ã¯ã„ã‘ãªã„
     @Column(nullable=false)
     private byte[] beanBytes;
     

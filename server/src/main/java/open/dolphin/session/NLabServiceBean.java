@@ -54,8 +54,8 @@ public class NLabServiceBean implements NLabServiceBeanLocal {
                 
             } catch (NoResultException e) {
                 PatientLiteModel dummy = new PatientLiteModel();
-                dummy.setFullName("–¢“o˜^");
-                dummy.setKanaName("–¢“o˜^");
+                dummy.setFullName("æœªç™»éŒ²");
+                dummy.setKanaName("æœªç™»éŒ²");
                 dummy.setGender("U");
                 ret.add(dummy);
             }
@@ -69,7 +69,7 @@ public class NLabServiceBean implements NLabServiceBeanLocal {
 
         String pid = module.getPatientId();
 
-        // {İID‚Æ LaboModule ‚ÌŠ³ÒID‚Å Š³Ò‚ğæ“¾‚·‚é
+        // æ–½è¨­IDã¨ LaboModule ã®æ‚£è€…IDã§ æ‚£è€…ã‚’å–å¾—ã™ã‚‹
         PatientModel patient = (PatientModel) em
                 .createQuery("from PatientModel p where p.facilityId=:fid and p.patientId=:pid")
                 .setParameter("fid", fid)
@@ -80,7 +80,7 @@ public class NLabServiceBean implements NLabServiceBeanLocal {
         //--------------------------------------------------------
         if (patient!=null) {
 
-            // Š³Ò‚ÌŒ’N•ÛŒ¯‚ğæ“¾‚·‚é
+            // æ‚£è€…ã®å¥åº·ä¿é™ºã‚’å–å¾—ã™ã‚‹
             List<HealthInsuranceModel> insurances
                     = (List<HealthInsuranceModel>)em.createQuery(QUERY_INSURANCE_BY_PATIENT_PK)
                     .setParameter(PK, patient.getId()).getResultList();
@@ -91,15 +91,15 @@ public class NLabServiceBean implements NLabServiceBeanLocal {
         String fidPid = fid+":"+pid;
         module.setPatientId(fidPid);
 
-        // item ‚Ì patientId ‚ğ•ÏX‚·‚é
+        // item ã® patientId ã‚’å¤‰æ›´ã™ã‚‹
         Collection<NLaboItem> items = module.getItems();
         for (NLaboItem item : items) {
             item.setPatientId(fidPid);
         }
 
         //--------------------------------------------------------
-        // patientId & ŒŸ‘ÌÌæ“ú & ƒ‰ƒ{ƒR[ƒh ‚Å key
-        // ‚±‚ê‚ªˆê’v‚µ‚Ä‚¢‚éƒ‚ƒWƒ…[ƒ‹‚ÍÄ•ñ‚Æ‚µ‚Äíœ‚µ‚Ä‚©‚ç“o˜^‚·‚éB
+        // patientId & æ¤œä½“æ¡å–æ—¥ & ãƒ©ãƒœã‚³ãƒ¼ãƒ‰ ã§ key
+        // ã“ã‚ŒãŒä¸€è‡´ã—ã¦ã„ã‚‹ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã¯å†å ±å‘Šã¨ã—ã¦å‰Šé™¤ã—ã¦ã‹ã‚‰ç™»éŒ²ã™ã‚‹ã€‚
         //--------------------------------------------------------
         String sampleDate = module.getSampleDate();
         String laboCode = module.getLaboCenterCode();
@@ -146,7 +146,7 @@ public class NLabServiceBean implements NLabServiceBeanLocal {
             System.err.println("module did remove");
         }
 
-        // ‰i‘±‰»‚·‚é
+        // æ°¸ç¶šåŒ–ã™ã‚‹
         em.persist(module);
 
         return patient;
@@ -154,11 +154,11 @@ public class NLabServiceBean implements NLabServiceBeanLocal {
 
 
     /**
-     * ƒ‰ƒ{ƒ‚ƒWƒ…[ƒ‹‚ğŒŸõ‚·‚éB
-     * @param patientId     ‘ÎÛŠ³Ò‚ÌID
-     * @param firstResult   æ“¾Œ‹‰ÊƒŠƒXƒg‚ÌÅ‰‚Ì”Ô†
-     * @param maxResult     æ“¾‚·‚éŒ”‚ÌÅ‘å’l
-     * @return              ƒ‰ƒ{ƒ‚ƒWƒ…[ƒ‹‚ÌƒŠƒXƒg
+     * ãƒ©ãƒœãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã‚’æ¤œç´¢ã™ã‚‹ã€‚
+     * @param patientId     å¯¾è±¡æ‚£è€…ã®ID
+     * @param firstResult   å–å¾—çµæœãƒªã‚¹ãƒˆã®æœ€åˆã®ç•ªå·
+     * @param maxResult     å–å¾—ã™ã‚‹ä»¶æ•°ã®æœ€å¤§å€¤
+     * @return              ãƒ©ãƒœãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã®ãƒªã‚¹ãƒˆ
      */
     @Override
     public List<NLaboModule> getLaboTest(String fidPid, int firstResult, int maxResult) {
@@ -166,7 +166,7 @@ public class NLabServiceBean implements NLabServiceBeanLocal {
         //String fidPid = SessionHelper.getQualifiedPid(ctx, patientId);
 
         //
-        // ŒŸ‘ÌÌæ“ú‚Ì~‡‚Å•Ô‚·
+        // æ¤œä½“æ¡å–æ—¥ã®é™é †ã§è¿”ã™
         //
         List<NLaboModule> ret = (List<NLaboModule>)
                         em.createQuery(QUERY_MODULE_BY_FIDPID)
@@ -197,12 +197,12 @@ public class NLabServiceBean implements NLabServiceBeanLocal {
 
 
     /**
-     * w’è‚³‚ê‚½ŒŸ¸€–Ú‚ğŒŸõ‚·‚éB
-     * @param patientId     Š³ÒID
-     * @param firstResult   Å‰‚ÌŒ‹‰Ê
-     * @param maxResult     –ß‚·Œ”‚ÌÅ‘å’l
-     * @param itemCode      ŒŸõ‚·‚éŒŸ¸€–ÚƒR[ƒh
-     * @return              ŒŸ¸€–ÚƒR[ƒh‚ª~‡‚ÉŠi”[‚³‚ê‚½ƒŠƒXƒg
+     * æŒ‡å®šã•ã‚ŒãŸæ¤œæŸ»é …ç›®ã‚’æ¤œç´¢ã™ã‚‹ã€‚
+     * @param patientId     æ‚£è€…ID
+     * @param firstResult   æœ€åˆã®çµæœ
+     * @param maxResult     æˆ»ã™ä»¶æ•°ã®æœ€å¤§å€¤
+     * @param itemCode      æ¤œç´¢ã™ã‚‹æ¤œæŸ»é …ç›®ã‚³ãƒ¼ãƒ‰
+     * @return              æ¤œæŸ»é …ç›®ã‚³ãƒ¼ãƒ‰ãŒé™é †ã«æ ¼ç´ã•ã‚ŒãŸãƒªã‚¹ãƒˆ
      */
     @Override
     public List<NLaboItem> getLaboTestItem(String fidPid, int firstResult, int maxResult, String itemCode) {

@@ -3,77 +3,77 @@ package open.dolphin.infomodel;
 public final class ClaimConst {
     
     public static final String DISEASE_MASTER_SYSTEM = "mml.codeSystem.diseaseMaster=ICD10_2001-10-03MEDIS";
-    public static final String CLASS_CODE_ID    = "Claim007";	// f—Ãsˆ×‹æ•ªƒe[ƒuƒ‹ID
-    public static final String SUBCLASS_CODE_ID = "Claim003";	// è‹ZAŞ—¿A–òÜ‹æ•ªƒe[ƒuƒ‹ID
-    public static final String NUMBER_CODE_ID   = "Claim004";	// ”—ÊƒR[ƒhƒe[ƒuƒ‹ID
+    public static final String CLASS_CODE_ID    = "Claim007";	// è¨ºç™‚è¡Œç‚ºåŒºåˆ†ãƒ†ãƒ¼ãƒ–ãƒ«ID
+    public static final String SUBCLASS_CODE_ID = "Claim003";	// æ‰‹æŠ€ã€ææ–™ã€è–¬å‰¤åŒºåˆ†ãƒ†ãƒ¼ãƒ–ãƒ«ID
+    public static final String NUMBER_CODE_ID   = "Claim004";	// æ•°é‡ã‚³ãƒ¼ãƒ‰ãƒ†ãƒ¼ãƒ–ãƒ«ID
 
-    /** è‹Z */
+    /** æ‰‹æŠ€ */
     public static final int SYUGI = 0;
 
-    /** Ş—¿ */
+    /** ææ–™ */
     public static final int ZAIRYO = 1;
 
-    /** –òÜ */
+    /** è–¬å‰¤ */
     public static final int YAKUZAI = 2;
 
-    /** —p–@ */
+    /** ç”¨æ³• */
     public static final int ADMIN = 3;
 
-    /** •”ˆÊ */
+    /** éƒ¨ä½ */
     public static final int BUI = 4;
     
-    /** ‚»‚Ì‘¼ */
+    /** ãã®ä»– */
     public static final int OTHER = 5;
 
-    /** –òÜ‹æ•ª “à—p */
+    /** è–¬å‰¤åŒºåˆ† å†…ç”¨ */
     public static final String YKZ_KBN_NAIYO = "1";
 
-    /** –òÜ‹æ•ª ’Ë */
+    /** è–¬å‰¤åŒºåˆ† æ³¨å°„ */
     public static final String YKZ_KBN_INJECTION = "4";
 
-    /** –òÜ‹æ•ª ŠO—p */
+    /** è–¬å‰¤åŒºåˆ† å¤–ç”¨ */
     public static final String YKZ_KBN_GAIYO = "6";
 
-    /** ƒŒƒZ“dZƒR[ƒh “à—p */
+    /** ãƒ¬ã‚»é›»ç®—ã‚³ãƒ¼ãƒ‰ å†…ç”¨ */
     public static final String RECEIPT_CODE_NAIYO = "210";
 
-    /** ƒŒƒZ“dZƒR[ƒh “à—p‰@“à */
+    /** ãƒ¬ã‚»é›»ç®—ã‚³ãƒ¼ãƒ‰ å†…ç”¨é™¢å†… */
     public static final String RECEIPT_CODE_NAIYO_IN = "211";
 
-    /** ƒŒƒZ“dZƒR[ƒh “à—p‰@ŠO */
+    /** ãƒ¬ã‚»é›»ç®—ã‚³ãƒ¼ãƒ‰ å†…ç”¨é™¢å¤– */
     public static final String RECEIPT_CODE_NAIYO_EXT = "212";
     
-    /** ƒŒƒZ“dZƒR[ƒh “à—p•ïŠ‡ */
+    /** ãƒ¬ã‚»é›»ç®—ã‚³ãƒ¼ãƒ‰ å†…ç”¨åŒ…æ‹¬ */
     public static final String RECEIPT_CODE_NAIYO_HOKATSU = "213";
 
-    /** ƒŒƒZ“dZƒR[ƒh “Ú—p */
+    /** ãƒ¬ã‚»é›»ç®—ã‚³ãƒ¼ãƒ‰ é “ç”¨ */
     public static final String RECEIPT_CODE_TONYO = "220";
 
-    /** ƒŒƒZ“dZƒR[ƒh “Ú—p‰@“à */
+    /** ãƒ¬ã‚»é›»ç®—ã‚³ãƒ¼ãƒ‰ é “ç”¨é™¢å†… */
     public static final String RECEIPT_CODE_TONYO_IN = "221";
 
-    /** ƒŒƒZ“dZƒR[ƒh “Ú—p‰@ŠO */
+    /** ãƒ¬ã‚»é›»ç®—ã‚³ãƒ¼ãƒ‰ é “ç”¨é™¢å¤– */
     public static final String RECEIPT_CODE_TONYO_EXT = "222";
 
-    /** ƒŒƒZ“dZƒR[ƒh “Ú—p•ïŠ‡ */
+    /** ãƒ¬ã‚»é›»ç®—ã‚³ãƒ¼ãƒ‰ é “ç”¨åŒ…æ‹¬ */
     public static final String RECEIPT_CODE_TONYO_HOKATSU = "222";
 
-    /** ƒŒƒZ“dZƒR[ƒh ŠO—p*/
+    /** ãƒ¬ã‚»é›»ç®—ã‚³ãƒ¼ãƒ‰ å¤–ç”¨*/
     public static final String RECEIPT_CODE_GAIYO = "230";
 
-    /** ƒŒƒZ“dZƒR[ƒh ŠO—p‰@“à*/
+    /** ãƒ¬ã‚»é›»ç®—ã‚³ãƒ¼ãƒ‰ å¤–ç”¨é™¢å†…*/
     public static final String RECEIPT_CODE_GAIYO_IN = "231";
 
-    /** ƒŒƒZ“dZƒR[ƒh ŠO—p‰@ŠO*/
+    /** ãƒ¬ã‚»é›»ç®—ã‚³ãƒ¼ãƒ‰ å¤–ç”¨é™¢å¤–*/
     public static final String RECEIPT_CODE_GAIYO_EXT = "232";
 
-     /** ƒŒƒZ“dZƒR[ƒh ŠO—p•ïŠ‡*/
+     /** ãƒ¬ã‚»é›»ç®—ã‚³ãƒ¼ãƒ‰ å¤–ç”¨åŒ…æ‹¬*/
     public static final String RECEIPT_CODE_GAIYO_HOKATSU = "233";
 
-    public static final String YAKUZAI_TOYORYO = "10";          // –òÜ“Š—^—Ê
-    public static final String YAKUZAI_TOYORYO_1KAI = "11";	// –òÜ“Š—^—Ê‚P‰ñ
-    public static final String YAKUZAI_TOYORYO_1NICHI = "12";	// –òÜ“Š—^—Ê‚P“ú
-    public static final String ZAIRYO_KOSU = "21";		// Ş—¿ŒÂ”
+    public static final String YAKUZAI_TOYORYO = "10";          // è–¬å‰¤æŠ•ä¸é‡
+    public static final String YAKUZAI_TOYORYO_1KAI = "11";	// è–¬å‰¤æŠ•ä¸é‡ï¼‘å›
+    public static final String YAKUZAI_TOYORYO_1NICHI = "12";	// è–¬å‰¤æŠ•ä¸é‡ï¼‘æ—¥
+    public static final String ZAIRYO_KOSU = "21";		// ææ–™å€‹æ•°
     public static final String INJECTION_310 = "310";
     public static final String INJECTION_320 = "320";
     public static final String INJECTION_330 = "330";
@@ -81,40 +81,40 @@ public final class ClaimConst {
     public static final String INJECTION_321 = "321";
     public static final String INJECTION_331 = "331";
 
-    /** è‹Zif—Ãsˆ×jƒR[ƒh‚Ì“ª”Ô† */
+    /** æ‰‹æŠ€ï¼ˆè¨ºç™‚è¡Œç‚ºï¼‰ã‚³ãƒ¼ãƒ‰ã®é ­ç•ªå· */
     public static final String SYUGI_CODE_START = "1";
 
-    /** –òÜƒR[ƒh‚Ì“ª”Ô† */
+    /** è–¬å‰¤ã‚³ãƒ¼ãƒ‰ã®é ­ç•ªå· */
     public static final String YAKUZAI_CODE_START = "6";
 
-    /** Ş—¿ƒR[ƒh‚Ì“ª”Ô† */
+    /** ææ–™ã‚³ãƒ¼ãƒ‰ã®é ­ç•ªå· */
     public static final String ZAIRYO_CODE_START = "7";
 
-    /** —p–@ƒR[ƒh‚Ì“ª”Ô† */
+    /** ç”¨æ³•ã‚³ãƒ¼ãƒ‰ã®é ­ç•ªå· */
     public static final String ADMIN_CODE_START = "001";
 
-    /** •úËü•”ˆÊƒR[ƒh‚Ì“ª”Ô† */
+    /** æ”¾å°„ç·šéƒ¨ä½ã‚³ãƒ¼ãƒ‰ã®é ­ç•ªå· */
     public static final String RBUI_CODE_START = "002";
 
-    /** ‰@“àˆ•û */
-    public static final String IN_MEDICINE = "‰@“àˆ•û";
+    /** é™¢å†…å‡¦æ–¹ */
+    public static final String IN_MEDICINE = "é™¢å†…å‡¦æ–¹";
     
-    /** ‰@ŠOˆ•û */
-    public static final String EXT_MEDICINE = "‰@ŠOˆ•û";
+    /** é™¢å¤–å‡¦æ–¹ */
+    public static final String EXT_MEDICINE = "é™¢å¤–å‡¦æ–¹";
 
-    public static final String SLOT_SYUGI = "è‹Z";
-    public static final String SLOT_NAIYO_YAKU = "“à—p–ò";
-    public static final String SLOT_TYUSHYA_YAKU = "’Ë–ò";
-    public static final String SLOT_GAIYO_YAKU = "ŠO—p–ò";
-    public static final String SLOT_YAKUZAI = "–òÜ";
-    public static final String SLOT_MEDICINE = "–ò";
-    public static final String SLOT_ZAIRYO = "Ş—¿";
-    public static final String SLOT_YOHO = "—p–@";
-    public static final String SLOT_BUI = "•”ˆÊ";
-    public static final String SLOT_OTHER = "‚»‚Ì‘¼";
+    public static final String SLOT_SYUGI = "æ‰‹æŠ€";
+    public static final String SLOT_NAIYO_YAKU = "å†…ç”¨è–¬";
+    public static final String SLOT_TYUSHYA_YAKU = "æ³¨å°„è–¬";
+    public static final String SLOT_GAIYO_YAKU = "å¤–ç”¨è–¬";
+    public static final String SLOT_YAKUZAI = "è–¬å‰¤";
+    public static final String SLOT_MEDICINE = "è–¬";
+    public static final String SLOT_ZAIRYO = "ææ–™";
+    public static final String SLOT_YOHO = "ç”¨æ³•";
+    public static final String SLOT_BUI = "éƒ¨ä½";
+    public static final String SLOT_OTHER = "ãã®ä»–";
     
-    public static final String UNIT_T = "ù";
-    public static final String UNIT_G = "‚‡";
-    public static final String UNIT_ML = "‚‚k";
-    public static final String UNIT_CAPSULE = "ƒJƒvƒZƒ‹";
+    public static final String UNIT_T = "éŒ ";
+    public static final String UNIT_G = "ï½‡";
+    public static final String UNIT_ML = "ï½ï¼¬";
+    public static final String UNIT_CAPSULE = "ã‚«ãƒ—ã‚»ãƒ«";
 }

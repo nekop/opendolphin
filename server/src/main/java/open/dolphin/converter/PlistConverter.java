@@ -265,7 +265,7 @@ public final class PlistConverter {
             throws IOException, IllegalAccessException, IllegalArgumentException,
             InvocationTargetException, MessagingException, ClassNotFoundException, InstantiationException {
 
-        // class–¼‚©‚ç key ‚ğ¶¬‚·‚é
+        // classåã‹ã‚‰ key ã‚’ç”Ÿæˆã™ã‚‹
         String clsName = target.getClass().getName();
         int from = clsName.lastIndexOf(".") + 1;
         int to = clsName.indexOf(CONVERTER_EXT);

@@ -117,7 +117,7 @@ public class DocInfoModel extends InfoModel
     //----------------------------------
     
     /**
-     * Document ‚Ì Database Primary Key ‚ğ•Ô‚·B
+     * Document ã® Database Primary Key ã‚’è¿”ã™ã€‚
      * @return Primary Key
      */
     public long getDocPk() {
@@ -126,7 +126,7 @@ public class DocInfoModel extends InfoModel
     
     
     /**
-     * Document ‚Ì Database Primary Key ‚ğİ’è‚·‚éB
+     * Document ã® Database Primary Key ã‚’è¨­å®šã™ã‚‹ã€‚
      * @param docPk Database Primary Key
      */
     public void setDocPk(long docPk) {
@@ -134,222 +134,222 @@ public class DocInfoModel extends InfoModel
     }
     
     /**
-     * e•ª•¶‘‚ÌPrimaryKey‚ğ•Ô‚·B
-     * @return e•ª•¶‘‚ÌPrimaryKey
+     * è¦ªåˆ†æ–‡æ›¸ã®PrimaryKeyã‚’è¿”ã™ã€‚
+     * @return è¦ªåˆ†æ–‡æ›¸ã®PrimaryKey
      */
     public long getParentPk() {
         return parentPk;
     }
     
     /**
-     * e•ª•¶‘‚ÌPrimaryKey‚ğİ’è‚·‚éB
-     * @param parentPk e•ª•¶‘‚ÌPrimaryKey
+     * è¦ªåˆ†æ–‡æ›¸ã®PrimaryKeyã‚’è¨­å®šã™ã‚‹ã€‚
+     * @param parentPk è¦ªåˆ†æ–‡æ›¸ã®PrimaryKey
      */
     public void setParentPk(long parentPk) {
         this.parentPk = parentPk;
     }
     
     /**
-     * •¶‘ID‚ğİ’è‚·‚éB
+     * æ–‡æ›¸IDã‚’è¨­å®šã™ã‚‹ã€‚
      *
      * @param docId
-     *            •¶‘ID
+     *            æ–‡æ›¸ID
      */
     public void setDocId(String docId) {
         this.docId = docId;
     }
     
     /**
-     * •¶‘ID‚ğ•Ô‚·B
+     * æ–‡æ›¸IDã‚’è¿”ã™ã€‚
      *
-     * @return •¶‘ID
+     * @return æ–‡æ›¸ID
      */
     public String getDocId() {
         return docId;
     }
     
     /**
-     * •¶‘ƒ^ƒCƒv‚ğİ’è‚·‚éB
+     * æ–‡æ›¸ã‚¿ã‚¤ãƒ—ã‚’è¨­å®šã™ã‚‹ã€‚
      *
      * @param docType
-     *            •¶‘ƒ^ƒCƒv
+     *            æ–‡æ›¸ã‚¿ã‚¤ãƒ—
      */
     public void setDocType(String docType) {
         this.docType = docType;
     }
     
     /**
-     * •¶‘ƒ^ƒCƒv‚ğ•Ô‚·B
+     * æ–‡æ›¸ã‚¿ã‚¤ãƒ—ã‚’è¿”ã™ã€‚
      *
-     * @return •¶‘ƒ^ƒCƒv.
+     * @return æ–‡æ›¸ã‚¿ã‚¤ãƒ—.
      */
     public String getDocType() {
         return docType;
     }
     
     /**
-     * ƒ^ƒCƒgƒ‹‚ğİ’è‚·‚éB
+     * ã‚¿ã‚¤ãƒˆãƒ«ã‚’è¨­å®šã™ã‚‹ã€‚
      *
      * @param title
-     *            ƒ^ƒCƒgƒ‹
+     *            ã‚¿ã‚¤ãƒˆãƒ«
      */
     public void setTitle(String title) {
         this.title = title;
     }
     
     /**
-     * ƒ^ƒCƒgƒ‹‚ğ•Ô‚·B
+     * ã‚¿ã‚¤ãƒˆãƒ«ã‚’è¿”ã™ã€‚
      *
-     * @return ƒ^ƒCƒgƒ‹
+     * @return ã‚¿ã‚¤ãƒˆãƒ«
      */
     public String getTitle() {
         return title;
     }
     
     /**
-     * ¶¬–Ú“I‚ğİ’è‚·‚éB
+     * ç”Ÿæˆç›®çš„ã‚’è¨­å®šã™ã‚‹ã€‚
      *
      * @param purpose
-     *            ¶¬–Ú“I
+     *            ç”Ÿæˆç›®çš„
      */
     public void setPurpose(String purpose) {
         this.purpose = purpose;
     }
     
     /**
-     * ¶¬–Ú“I‚ğ•Ô‚·B
+     * ç”Ÿæˆç›®çš„ã‚’è¿”ã™ã€‚
      *
-     * @return ¶¬–Ú“I
+     * @return ç”Ÿæˆç›®çš„
      */
     public String getPurpose() {
         return purpose;
     }
     
     /**
-     * ¶¬–Ú“Ià–¾‚ğİ’è‚·‚éB
+     * ç”Ÿæˆç›®çš„èª¬æ˜ã‚’è¨­å®šã™ã‚‹ã€‚
      *
      * @param purposeDesc
-     *            ¶¬–Ú“Ià–¾
+     *            ç”Ÿæˆç›®çš„èª¬æ˜
      */
     public void setPurposeDesc(String purposeDesc) {
         this.purposeDesc = purposeDesc;
     }
     
     /**
-     * ¶¬–Ú“Ià–¾‚ğ•Ô‚·B
+     * ç”Ÿæˆç›®çš„èª¬æ˜ã‚’è¿”ã™ã€‚
      *
-     * @return ¶¬–Ú“Ià–¾
+     * @return ç”Ÿæˆç›®çš„èª¬æ˜
      */
     public String getPurposeDesc() {
         return purposeDesc;
     }
     
     /**
-     * ¶¬–Ú“IƒR[ƒh‘ÌŒn‚ğİ’è‚·‚éB
+     * ç”Ÿæˆç›®çš„ã‚³ãƒ¼ãƒ‰ä½“ç³»ã‚’è¨­å®šã™ã‚‹ã€‚
      *
      * @param purposeCodeSys
-     *            ¶¬–Ú“IƒR[ƒh‘ÌŒn
+     *            ç”Ÿæˆç›®çš„ã‚³ãƒ¼ãƒ‰ä½“ç³»
      */
     public void setPurposeCodeSys(String purposeCodeSys) {
         this.purposeCodeSys = purposeCodeSys;
     }
     
     /**
-     * ¶¬–Ú“IƒR[ƒh‘ÌŒn‚ğ•Ô‚·B
+     * ç”Ÿæˆç›®çš„ã‚³ãƒ¼ãƒ‰ä½“ç³»ã‚’è¿”ã™ã€‚
      *
-     * @return ¶¬–Ú“IƒR[ƒh‘ÌŒn
+     * @return ç”Ÿæˆç›®çš„ã‚³ãƒ¼ãƒ‰ä½“ç³»
      */
     public String getPurposeCodeSys() {
         return purposeCodeSys;
     }
     
     /**
-     * Å‰‚ÌŠm’è“ú‚ğİ’è‚·‚éB
+     * æœ€åˆã®ç¢ºå®šæ—¥ã‚’è¨­å®šã™ã‚‹ã€‚
      *
      * @param firstConfirmDate
-     *            Å‰‚ÌŠm’è“ú
+     *            æœ€åˆã®ç¢ºå®šæ—¥
      */
     public void setFirstConfirmDate(Date firstConfirmDate) {
         this.firstConfirmDate = firstConfirmDate;
     }
     
     /**
-     * Å‰‚ÌŠm’è“ú‚ğ•Ô‚·B
+     * æœ€åˆã®ç¢ºå®šæ—¥ã‚’è¿”ã™ã€‚
      *
-     * @return Å‰‚ÌŠm’è“ú
+     * @return æœ€åˆã®ç¢ºå®šæ—¥
      */
     public Date getFirstConfirmDate() {
         return firstConfirmDate;
     }
     
     /**
-     * Å‰‚ÌŠm’è“ú‚Ì“ú•t•”•ª‚ğ•Ô‚·B
+     * æœ€åˆã®ç¢ºå®šæ—¥ã®æ—¥ä»˜éƒ¨åˆ†ã‚’è¿”ã™ã€‚
      *
-     * @return Å‰‚ÌŠm’è“ú‚Ì“ú•t•”•ª
+     * @return æœ€åˆã®ç¢ºå®šæ—¥ã®æ—¥ä»˜éƒ¨åˆ†
      */
     public String getFirstConfirmDateTrimTime() {
         return ModelUtils.getDateAsString(getFirstConfirmDate());
     }
     
     /**
-     * Šm’è“ú‚ğİ’è‚·‚éB
+     * ç¢ºå®šæ—¥ã‚’è¨­å®šã™ã‚‹ã€‚
      *
      * @param confirmDate
-     *            Šm’è“ú
+     *            ç¢ºå®šæ—¥
      */
     public void setConfirmDate(Date confirmDate) {
         this.confirmDate = confirmDate;
     }
     
     /**
-     * Šm’è“ú‚ğ•Ô‚·B
+     * ç¢ºå®šæ—¥ã‚’è¿”ã™ã€‚
      *
-     * @return Šm’è“ú
+     * @return ç¢ºå®šæ—¥
      */
     public Date getConfirmDate() {
         return confirmDate;
     }
     
     /**
-     * Šm’è“ú‚Ì“ú•t•”•ª‚ğ•Ô‚·B
+     * ç¢ºå®šæ—¥ã®æ—¥ä»˜éƒ¨åˆ†ã‚’è¿”ã™ã€‚
      *
-     * @return Šm’è“ú‚Ì“ú•t•”•ª
+     * @return ç¢ºå®šæ—¥ã®æ—¥ä»˜éƒ¨åˆ†
      */
     public String getConfirmDateTrimTime() {
         return ModelUtils.getDateAsString(getConfirmDate());
     }
     
     /**
-     * f—Ã‰È‚ğİ’è‚·‚éB
+     * è¨ºç™‚ç§‘ã‚’è¨­å®šã™ã‚‹ã€‚
      *
-     * @param department f—Ã‰È
+     * @param department è¨ºç™‚ç§‘
      */
     public void setDepartment(String department) {
         this.department = department;
     }
     
     /**
-     * f—Ã‰È‚ğ•Ô‚·B
+     * è¨ºç™‚ç§‘ã‚’è¿”ã™ã€‚
      *
-     * @return f—Ã‰È
+     * @return è¨ºç™‚ç§‘
      */
     public String getDepartment() {
         return department;
     }
     
     /**
-     * f—Ã‰Èà–¾‚ğİ’è‚·‚éB
+     * è¨ºç™‚ç§‘èª¬æ˜ã‚’è¨­å®šã™ã‚‹ã€‚
      *
-     * @param departmentDesc f—Ã‰Èà–¾
+     * @param departmentDesc è¨ºç™‚ç§‘èª¬æ˜
      */
     public void setDepartmentDesc(String departmentDesc) {
         this.departmentDesc = departmentDesc;
     }
     
     /**
-     * f—Ã‰Èà–¾‚ğ•Ô‚·B
+     * è¨ºç™‚ç§‘èª¬æ˜ã‚’è¿”ã™ã€‚
      *
-     * @return f—Ã‰Èà–¾
+     * @return è¨ºç™‚ç§‘èª¬æ˜
      */
     public String getDepartmentDesc() {
         return departmentDesc;
@@ -386,8 +386,8 @@ public class DocInfoModel extends InfoModel
     
     private String[] tokenizeDept(String dept) {
         
-        // f—Ã‰È–¼AƒR[ƒhA’S“–ˆã–¼A’S“–ˆãƒR[ƒhAJMARI ƒR[ƒh
-        // ‚ğŠi”[‚·‚é”z—ñ‚ğ¶¬‚·‚é
+        // è¨ºç™‚ç§‘åã€ã‚³ãƒ¼ãƒ‰ã€æ‹…å½“åŒ»åã€æ‹…å½“åŒ»ã‚³ãƒ¼ãƒ‰ã€JMARI ã‚³ãƒ¼ãƒ‰
+        // ã‚’æ ¼ç´ã™ã‚‹é…åˆ—ã‚’ç”Ÿæˆã™ã‚‹
         String[] ret = new String[5];
         Arrays.fill(ret, null);
         
@@ -406,133 +406,133 @@ public class DocInfoModel extends InfoModel
     /********************************************/
     
     /**
-     * f—Ã‰È‘ÌŒn‚ğİ’è‚·‚éB
+     * è¨ºç™‚ç§‘ä½“ç³»ã‚’è¨­å®šã™ã‚‹ã€‚
      *
      * @param departmentCodeSys
-     *            f—Ã‰È‘ÌŒn
+     *            è¨ºç™‚ç§‘ä½“ç³»
      */
     public void setDepartmentCodeSys(String departmentCodeSys) {
         this.departmentCodeSys = departmentCodeSys;
     }
     
     /**
-     * f—Ã‰È‘ÌŒn‚ğ•Ô‚·B
+     * è¨ºç™‚ç§‘ä½“ç³»ã‚’è¿”ã™ã€‚
      *
-     * @return f—Ã‰È‘ÌŒn
+     * @return è¨ºç™‚ç§‘ä½“ç³»
      */
     public String getDepartmentCodeSys() {
         return departmentCodeSys;
     }
     
     /**
-     * Œ’N•ÛŒ¯‚ğİ’è‚·‚éB
+     * å¥åº·ä¿é™ºã‚’è¨­å®šã™ã‚‹ã€‚
      *
      * @param healthInsuranceCode
-     *            Œ’N•ÛŒ¯
+     *            å¥åº·ä¿é™º
      */
     public void setHealthInsurance(String healthInsurance) {
         this.healthInsurance = healthInsurance;
     }
     
     /**
-     * Œ’N•ÛŒ¯‚ğ•Ô‚·B
+     * å¥åº·ä¿é™ºã‚’è¿”ã™ã€‚
      *
-     * @return Œ’N•ÛŒ¯
+     * @return å¥åº·ä¿é™º
      */
     public String getHealthInsurance() {
         return healthInsurance;
     }
     
     /**
-     * Œ’N•ÛŒ¯à–¾‚ğİ’è‚·‚éB
+     * å¥åº·ä¿é™ºèª¬æ˜ã‚’è¨­å®šã™ã‚‹ã€‚
      *
      * @param healthInsuranceDesc
-     *            Œ’N•ÛŒ¯à–¾
+     *            å¥åº·ä¿é™ºèª¬æ˜
      */
     public void setHealthInsuranceDesc(String healthInsuranceDesc) {
         this.healthInsuranceDesc = healthInsuranceDesc;
     }
     
     /**
-     * Œ’N•ÛŒ¯à–¾‚ğ•Ô‚·B
+     * å¥åº·ä¿é™ºèª¬æ˜ã‚’è¿”ã™ã€‚
      *
-     * @return Œ’N•ÛŒ¯à–¾
+     * @return å¥åº·ä¿é™ºèª¬æ˜
      */
     public String getHealthInsuranceDesc() {
         return healthInsuranceDesc;
     }
     
     /**
-     * Œ’N•ÛŒ¯‘ÌŒn‚ğİ’è‚·‚éB
+     * å¥åº·ä¿é™ºä½“ç³»ã‚’è¨­å®šã™ã‚‹ã€‚
      *
      * @param healthInsuranceCodeSys
-     *            Œ’N•ÛŒ¯‘ÌŒn
+     *            å¥åº·ä¿é™ºä½“ç³»
      */
     public void setHealthInsuranceCodeSys(String healthInsuranceCodeSys) {
         this.healthInsuranceCodeSys = healthInsuranceCodeSys;
     }
     
     /**
-     * Œ’N•ÛŒ¯‘ÌŒn‚ğ•Ô‚·B
+     * å¥åº·ä¿é™ºä½“ç³»ã‚’è¿”ã™ã€‚
      *
-     * @return Œ’N•ÛŒ¯‘ÌŒn
+     * @return å¥åº·ä¿é™ºä½“ç³»
      */
     public String getHealthInsuranceCodeSys() {
         return healthInsuranceCodeSys;
     }
     
     /**
-     * Œ’N•ÛŒ¯GUID‚ğİ’è‚·‚éB
+     * å¥åº·ä¿é™ºGUIDã‚’è¨­å®šã™ã‚‹ã€‚
      *
      * @param healthInsuranceGUID
-     *            Œ’N•ÛŒ¯UUID
+     *            å¥åº·ä¿é™ºUUID
      */
     public void setHealthInsuranceGUID(String healthInsuranceGUID) {
         this.healthInsuranceGUID = healthInsuranceGUID;
     }
     
     /**
-     * Œ’N•ÛŒ¯GUID‚ğ•Ô‚·B
+     * å¥åº·ä¿é™ºGUIDã‚’è¿”ã™ã€‚
      *
-     * @return Œ’N•ÛŒ¯UUID
+     * @return å¥åº·ä¿é™ºUUID
      */
     public String getHealthInsuranceGUID() {
         return healthInsuranceGUID;
     }
     
     /**
-     * ’‹L‚ª‚ ‚é‚©‚Ç‚¤‚©‚ğİ’è‚·‚éB
+     * æ³¨è¨˜ãŒã‚ã‚‹ã‹ã©ã†ã‹ã‚’è¨­å®šã™ã‚‹ã€‚
      *
      * @param hasMark
-     *            ’‹L‚ª‚ ‚é true
+     *            æ³¨è¨˜ãŒã‚ã‚‹æ™‚ true
      */
     public void setHasMark(boolean hasMark) {
         this.hasMark = hasMark;
     }
     
     /**
-     * ’‹L‚ª‚ ‚é‚©‚Ç‚¤‚©‚ğ•Ô‚·B
+     * æ³¨è¨˜ãŒã‚ã‚‹ã‹ã©ã†ã‹ã‚’è¿”ã™ã€‚
      *
-     * @return ’‹L‚ª‚ ‚é true
+     * @return æ³¨è¨˜ãŒã‚ã‚‹æ™‚ true
      */
     public boolean isHasMark() {
         return hasMark;
     }
     
     /**
-     * ‰æ‘œ‚ª‚ ‚é‚©‚Ç‚¤‚©‚ğİ’è‚·‚éB
+     * ç”»åƒãŒã‚ã‚‹ã‹ã©ã†ã‹ã‚’è¨­å®šã™ã‚‹ã€‚
      *
      * @param hasImage
-     *            ‰æ‘œ‚ª‚ ‚é true
+     *            ç”»åƒãŒã‚ã‚‹æ™‚ true
      */
     public void setHasImage(boolean hasImage) {
         this.hasImage = hasImage;
     }
     
     /**
-     * ‰æ‘œ‚ª‚ ‚é‚©‚Ç‚¤‚©‚ğ•Ô‚·B
+     * ç”»åƒãŒã‚ã‚‹ã‹ã©ã†ã‹ã‚’è¿”ã™ã€‚
      *
-     * @return ‰æ‘œ‚ª‚ ‚é true
+     * @return ç”»åƒãŒã‚ã‚‹æ™‚ true
      */
     public boolean isHasImage() {
         return hasImage;
@@ -543,19 +543,19 @@ public class DocInfoModel extends InfoModel
     }
     
     /**
-     * ˆ•û‚ª‚ ‚é‚©‚Ç‚¤‚©‚ğİ’è‚·‚éB
+     * å‡¦æ–¹ãŒã‚ã‚‹ã‹ã©ã†ã‹ã‚’è¨­å®šã™ã‚‹ã€‚
      *
      * @param hasRp
-     *            ˆ•û‚ª‚ ‚é true
+     *            å‡¦æ–¹ãŒã‚ã‚‹æ™‚ true
      */
     public void setHasRp(boolean hasRp) {
         this.hasRp = hasRp;
     }
     
     /**
-     * ˆ•û‚ª‚ ‚é‚©‚Ç‚¤‚©‚ğ•Ô‚·B
+     * å‡¦æ–¹ãŒã‚ã‚‹ã‹ã©ã†ã‹ã‚’è¿”ã™ã€‚
      *
-     * @return ˆ•û‚ª‚ ‚é true
+     * @return å‡¦æ–¹ãŒã‚ã‚‹æ™‚ true
      */
     public boolean isHasRp() {
         return hasRp;
@@ -566,19 +566,19 @@ public class DocInfoModel extends InfoModel
     }
     
     /**
-     * ˆ’u‚ª‚ ‚é‚©‚Ç‚¤‚©‚ğİ’è‚·‚éB
+     * å‡¦ç½®ãŒã‚ã‚‹ã‹ã©ã†ã‹ã‚’è¨­å®šã™ã‚‹ã€‚
      *
      * @param hasTreatment
-     *            ˆ’u‚ª‚ ‚é true
+     *            å‡¦ç½®ãŒã‚ã‚‹æ™‚ true
      */
     public void setHasTreatment(boolean hasTreatment) {
         this.hasTreatment = hasTreatment;
     }
     
     /**
-     * ˆ’u‚ª‚ ‚é‚©‚Ç‚¤‚©‚ğ•Ô‚·B
+     * å‡¦ç½®ãŒã‚ã‚‹ã‹ã©ã†ã‹ã‚’è¿”ã™ã€‚
      *
-     * @return ˆ’u‚ª‚ ‚é true
+     * @return å‡¦ç½®ãŒã‚ã‚‹æ™‚ true
      */
     public boolean isHasTreatment() {
         return hasTreatment;
@@ -589,10 +589,10 @@ public class DocInfoModel extends InfoModel
     }
     
     /**
-     * ƒ‰ƒ{ƒeƒXƒg‚ª‚ ‚é‚©‚Ç‚¤‚©‚ğİ’è‚·‚éB
+     * ãƒ©ãƒœãƒ†ã‚¹ãƒˆãŒã‚ã‚‹ã‹ã©ã†ã‹ã‚’è¨­å®šã™ã‚‹ã€‚
      *
      * @param hasLaboTest
-     *            ƒ‰ƒ{ƒeƒXƒg‚ª‚ ‚é true
+     *            ãƒ©ãƒœãƒ†ã‚¹ãƒˆãŒã‚ã‚‹æ™‚ true
      */
     public void setHasLaboTest(boolean hasLaboTest) {
         this.hasLaboTest = hasLaboTest;
@@ -603,47 +603,47 @@ public class DocInfoModel extends InfoModel
     }
     
     /**
-     * ƒ‰ƒ{ƒeƒXƒg‚ª‚ ‚é‚©‚Ç‚¤‚©‚ğ•Ô‚·B
+     * ãƒ©ãƒœãƒ†ã‚¹ãƒˆãŒã‚ã‚‹ã‹ã©ã†ã‹ã‚’è¿”ã™ã€‚
      *
-     * @return ƒ‰ƒ{ƒeƒXƒg‚ª‚ ‚é true
+     * @return ãƒ©ãƒœãƒ†ã‚¹ãƒˆãŒã‚ã‚‹æ™‚ true
      */
     public Boolean isHasLaboTestBoolean() {
         return hasLaboTest;
     }
     
     /**
-     * ƒo[ƒWƒ‡ƒ“”Ô†‚ğİ’è‚·‚éB
+     * ãƒãƒ¼ã‚¸ãƒ§ãƒ³ç•ªå·ã‚’è¨­å®šã™ã‚‹ã€‚
      *
      * @param version
-     *            ƒo[ƒWƒ‡ƒ“”Ô†
+     *            ãƒãƒ¼ã‚¸ãƒ§ãƒ³ç•ªå·
      */
     public void setVersionNumber(String version) {
         this.versionNumber = version;
     }
     
     /**
-     * ƒo[ƒWƒ‡ƒ“”Ô†‚ğ•Ô‚·B
+     * ãƒãƒ¼ã‚¸ãƒ§ãƒ³ç•ªå·ã‚’è¿”ã™ã€‚
      *
-     * @return ƒo[ƒWƒ‡ƒ“”Ô†
+     * @return ãƒãƒ¼ã‚¸ãƒ§ãƒ³ç•ªå·
      */
     public String getVersionNumber() {
         return versionNumber;
     }
     
     /**
-     * ƒo[ƒWƒ‡ƒ“ƒm[ƒg‚ğİ’è‚·‚éB
+     * ãƒãƒ¼ã‚¸ãƒ§ãƒ³ãƒãƒ¼ãƒˆã‚’è¨­å®šã™ã‚‹ã€‚
      *
      * @param versionNotes
-     *            ƒo[ƒWƒ‡ƒ“ƒm[ƒg
+     *            ãƒãƒ¼ã‚¸ãƒ§ãƒ³ãƒãƒ¼ãƒˆ
      */
     public void setVersionNotes(String versionNotes) {
         this.versionNotes = versionNotes;
     }
     
     /**
-     * ƒo[ƒWƒ‡ƒ“ƒm[ƒg‚ğ•Ô‚·B
+     * ãƒãƒ¼ã‚¸ãƒ§ãƒ³ãƒãƒ¼ãƒˆã‚’è¿”ã™ã€‚
      *
-     * @return ƒo[ƒWƒ‡ƒ“ƒm[ƒg
+     * @return ãƒãƒ¼ã‚¸ãƒ§ãƒ³ãƒãƒ¼ãƒˆ
      */
     public String getVersionNotes() {
         return versionNotes;
@@ -660,103 +660,103 @@ public class DocInfoModel extends InfoModel
 //    }
     
     /**
-     * e•¶‘ID‚ğİ’è‚·‚éB
+     * è¦ªæ–‡æ›¸IDã‚’è¨­å®šã™ã‚‹ã€‚
      *
      * @param parentId
-     *            e•¶‘ID
+     *            è¦ªæ–‡æ›¸ID
      */
     public void setParentId(String parentId) {
         this.parentId = parentId;
     }
     
     /**
-     * e•¶‘ID‚ğ•Ô‚·B
+     * è¦ªæ–‡æ›¸IDã‚’è¿”ã™ã€‚
      *
-     * @return e•¶‘ID
+     * @return è¦ªæ–‡æ›¸ID
      */
     public String getParentId() {
         return parentId;
     }
     
     /**
-     * e•¶‘‚Æ‚ÌŠÖŒW‚ğİ’è‚·‚éB
+     * è¦ªæ–‡æ›¸ã¨ã®é–¢ä¿‚ã‚’è¨­å®šã™ã‚‹ã€‚
      *
      * @param parentIdRelation
-     *            e•¶‘‚Æ‚ÌŠÖŒW
+     *            è¦ªæ–‡æ›¸ã¨ã®é–¢ä¿‚
      */
     public void setParentIdRelation(String parentIdRelation) {
         this.parentIdRelation = parentIdRelation;
     }
     
     /**
-     * e•¶‘‚Æ‚ÌŠÖŒW‚ğ•Ô‚·B
+     * è¦ªæ–‡æ›¸ã¨ã®é–¢ä¿‚ã‚’è¿”ã™ã€‚
      *
-     * @return e•¶‘‚Æ‚ÌŠÖŒW
+     * @return è¦ªæ–‡æ›¸ã¨ã®é–¢ä¿‚
      */
     public String getParentIdRelation() {
         return parentIdRelation;
     }
     
     /**
-     * e•¶‘‚Æ‚ÌŠÖŒWà–¾‚ğİ’è‚·‚éB
+     * è¦ªæ–‡æ›¸ã¨ã®é–¢ä¿‚èª¬æ˜ã‚’è¨­å®šã™ã‚‹ã€‚
      *
      * @param relationDesc
-     *            e•¶‘‚Æ‚ÌŠÖŒWà–¾
+     *            è¦ªæ–‡æ›¸ã¨ã®é–¢ä¿‚èª¬æ˜
      */
     public void setParentIdDesc(String relationDesc) {
         this.parentIdDesc = relationDesc;
     }
     
     /**
-     * e•¶‘‚Æ‚ÌŠÖŒWà–¾‚ğ•Ô‚·B
+     * è¦ªæ–‡æ›¸ã¨ã®é–¢ä¿‚èª¬æ˜ã‚’è¿”ã™ã€‚
      *
-     * @return e•¶‘‚Æ‚ÌŠÖŒWà–¾
+     * @return è¦ªæ–‡æ›¸ã¨ã®é–¢ä¿‚èª¬æ˜
      */
     public String getParentIdDesc() {
         return parentIdDesc;
     }
     
     /**
-     * e•¶‘‚Æ‚ÌŠÖŒW‘ÌŒn‚ğİ’è‚·‚éB
+     * è¦ªæ–‡æ›¸ã¨ã®é–¢ä¿‚ä½“ç³»ã‚’è¨­å®šã™ã‚‹ã€‚
      *
      * @param relationCodeSys
-     *            e•¶‘‚Æ‚ÌŠÖŒW‘ÌŒn‚ğİ’è‚·‚éB
+     *            è¦ªæ–‡æ›¸ã¨ã®é–¢ä¿‚ä½“ç³»ã‚’è¨­å®šã™ã‚‹ã€‚
      */
     public void setParentIdCodeSys(String relationCodeSys) {
         this.parentIdCodeSys = relationCodeSys;
     }
     
     /**
-     * e•¶‘‚Æ‚ÌŠÖŒW‘ÌŒn‚ğ•Ô‚·B
+     * è¦ªæ–‡æ›¸ã¨ã®é–¢ä¿‚ä½“ç³»ã‚’è¿”ã™ã€‚
      *
-     * @return e•¶‘‚Æ‚ÌŠÖŒW‘ÌŒn
+     * @return è¦ªæ–‡æ›¸ã¨ã®é–¢ä¿‚ä½“ç³»
      */
     public String getParentIdCodeSys() {
         return parentIdCodeSys;
     }
     
     /**
-     * ƒAƒNƒZƒXŒ ‚ğ•Ô‚·B
+     * ã‚¢ã‚¯ã‚»ã‚¹æ¨©ã‚’è¿”ã™ã€‚
      *
-     * @return AccessRightModel‚ÌƒRƒŒƒNƒVƒ‡ƒ“
+     * @return AccessRightModelã®ã‚³ãƒ¬ã‚¯ã‚·ãƒ§ãƒ³
      */
     public Collection<AccessRightModel> getAccessRights() {
         return accessRights;
     }
     
     /**
-     * ƒAƒNƒZƒXŒ ‚ğİ’è‚·‚éB
+     * ã‚¢ã‚¯ã‚»ã‚¹æ¨©ã‚’è¨­å®šã™ã‚‹ã€‚
      *
-     * @param sccessRights ƒAƒNƒZƒXŒ ‚ÌƒRƒŒƒNƒVƒ‡ƒ“
+     * @param sccessRights ã‚¢ã‚¯ã‚»ã‚¹æ¨©ã®ã‚³ãƒ¬ã‚¯ã‚·ãƒ§ãƒ³
      */
     public void setAccessRights(Collection<AccessRightModel> accessRights) {
         this.accessRights = accessRights;
     }
     
     /**
-     * ƒAƒNƒZƒXŒ ‚ğ’Ç‰Á‚·‚éB
+     * ã‚¢ã‚¯ã‚»ã‚¹æ¨©ã‚’è¿½åŠ ã™ã‚‹ã€‚
      *
-     * @param accessRight ’Ç‰Á‚·‚éƒAƒNƒZƒXŒ 
+     * @param accessRight è¿½åŠ ã™ã‚‹ã‚¢ã‚¯ã‚»ã‚¹æ¨©
      */
     public void addAccessRight(AccessRightModel accessRight) {
         if (accessRights == null) {
@@ -766,19 +766,19 @@ public class DocInfoModel extends InfoModel
     }
     
     /**
-     * ‚±‚Ì•¶‘‚ÌƒXƒe[ƒ^ƒX‚ğİ’è‚·‚éB
+     * ã“ã®æ–‡æ›¸ã®ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ã‚’è¨­å®šã™ã‚‹ã€‚
      *
      * @param status
-     *            ‚±‚Ì•¶‘‚ÌƒXƒe[ƒ^ƒX
+     *            ã“ã®æ–‡æ›¸ã®ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹
      */
     public void setStatus(String status) {
         this.status = status;
     }
     
     /**
-     * ‚±‚Ì•¶‘‚ÌƒXƒe[ƒ^ƒX‚ğ•Ô‚·B
+     * ã“ã®æ–‡æ›¸ã®ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ã‚’è¿”ã™ã€‚
      *
-     * @return ‚±‚Ì•¶‘‚ÌƒXƒe[ƒ^ƒX
+     * @return ã“ã®æ–‡æ›¸ã®ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹
      */
     public String getStatus() {
         return status;
@@ -793,7 +793,7 @@ public class DocInfoModel extends InfoModel
     }
     
     /**
-     * ƒnƒbƒVƒ…’l‚ğ•Ô‚·B
+     * ãƒãƒƒã‚·ãƒ¥å€¤ã‚’è¿”ã™ã€‚
      */
     @Override
     public int hashCode() {
@@ -801,9 +801,9 @@ public class DocInfoModel extends InfoModel
     }
     
     /**
-     * •¶‘ID‚Å eqaul ‚©‚Ç‚¤‚©‚ğ•Ô‚·B
+     * æ–‡æ›¸IDã§ eqaul ã‹ã©ã†ã‹ã‚’è¿”ã™ã€‚
      *
-     * @return equal ‚Ì true
+     * @return equal ã®æ™‚ true
      */
     @Override
     public boolean equals(Object other) {
@@ -814,9 +814,9 @@ public class DocInfoModel extends InfoModel
     }
     
     /**
-     * Å‰‚ÌŠm’è“ú‹y‚ÑŠm’è“ú‚Å”äŠr‚·‚éB
+     * æœ€åˆã®ç¢ºå®šæ—¥åŠã³ç¢ºå®šæ—¥ã§æ¯”è¼ƒã™ã‚‹ã€‚
      *
-     * @return ”äŠr’l
+     * @return æ¯”è¼ƒå€¤
      */
     @Override
     public int compareTo(Object other) {

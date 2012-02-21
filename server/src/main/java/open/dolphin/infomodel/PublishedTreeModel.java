@@ -37,20 +37,20 @@ public class PublishedTreeModel extends InfoModel implements IStampTreeModel, ja
     @JoinColumn(name="user_id", nullable=false)
     private UserModel user;
     
-    // TreeSet‚Ì–¼Ì
+    // TreeSetã®åç§°
     @Column(nullable=false)
     private String name;
     
     // OID or Public
-    // OID ‚Ì‚Í{İ—p
+    // OID ã®æ™‚ã¯æ–½è¨­ç”¨
     @Column(nullable=false)
     private String publishType;
     
-    // Tree‚ÌƒJƒeƒSƒŠ
+    // Treeã®ã‚«ãƒ†ã‚´ãƒª
     @Column(nullable=false)
     private String category;
     
-    // ’c‘Ì–¼“™
+    // å›£ä½“åç­‰
     @Column(nullable=false)
     private String partyName;
     
@@ -58,11 +58,11 @@ public class PublishedTreeModel extends InfoModel implements IStampTreeModel, ja
     @Column(nullable=false)
     private String url;
     
-    // à–¾
+    // èª¬æ˜
     @Column(nullable=false)
     private String description;
     
-    // ŒöŠJ‚µ‚½“ú
+    // å…¬é–‹ã—ãŸæ—¥
     @Column(nullable=false)
     @Temporal(value = TemporalType.DATE)
     private Date publishedDate;
@@ -74,7 +74,7 @@ public class PublishedTreeModel extends InfoModel implements IStampTreeModel, ja
     @Lob
     private byte[] treeBytes;
     
-    // XV‚µ‚½“ú
+    // æ›´æ–°ã—ãŸæ—¥
     @Column(nullable=false)
     @Temporal(value = TemporalType.DATE)
     private Date lastUpdated;

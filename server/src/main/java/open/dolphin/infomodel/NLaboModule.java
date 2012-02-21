@@ -19,23 +19,23 @@ public class NLaboModule extends InfoModel implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    // Š³ÒID fid:Pid
+    // æ‚£è€…ID fid:Pid
     @Column(nullable = false)
     private String patientId;
 
-    // ƒ‰ƒ{ƒR[ƒh
+    // ãƒ©ãƒœã‚³ãƒ¼ãƒ‰
     private String laboCenterCode;
 
-    // Š³Ò–¼
+    // æ‚£è€…æ°å
     private String patientName;
 
-    // Š³Ò«•Ê
+    // æ‚£è€…æ€§åˆ¥
     private String patientSex;
 
-    // ŒŸ‘ÌÌæ“ú‚Ü‚½‚ÍŒŸ¸ó•t“ú
+    // æ¤œä½“æ¡å–æ—¥ã¾ãŸã¯æ¤œæŸ»å—ä»˜æ—¥æ™‚
     private String sampleDate;
 
-    // ‚±‚ÌŒŸ¸ƒ‚ƒWƒ…[ƒ‹‚ÉŠÜ‚Ü‚ê‚Ä‚¢‚éŒŸ¸€–Ú‚Ì”
+    // ã“ã®æ¤œæŸ»ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã«å«ã¾ã‚Œã¦ã„ã‚‹æ¤œæŸ»é …ç›®ã®æ•°
     private String numOfItems;
 
     // Module Key
@@ -207,9 +207,9 @@ public class NLaboModule extends InfoModel implements Serializable {
 
 
     /**
-     * ˆø”‚Åw’è‚³‚ê‚½ŒŸ¸ƒR[ƒh‚ğ‚Â NLaboItem‚ğ•Ô‚·B
-     * @param testCode ŒŸ¸ƒR[ƒh
-     * @return ŠY“–‚·‚éNLaboItem
+     * å¼•æ•°ã§æŒ‡å®šã•ã‚ŒãŸæ¤œæŸ»ã‚³ãƒ¼ãƒ‰ã‚’æŒã¤ NLaboItemã‚’è¿”ã™ã€‚
+     * @param testCode æ¤œæŸ»ã‚³ãƒ¼ãƒ‰
+     * @return è©²å½“ã™ã‚‹NLaboItem
      */
     public NLaboItem getTestItem(String testCode) {
 

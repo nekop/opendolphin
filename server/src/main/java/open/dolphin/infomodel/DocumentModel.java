@@ -27,7 +27,7 @@ public class DocumentModel extends KarteEntryBean
 
     
     /**
-     * DocumentModel‚ğ¶¬‚·‚éB
+     * DocumentModelã‚’ç”Ÿæˆã™ã‚‹ã€‚
      */
     public DocumentModel() {
         docInfo = new DocInfoModel();
@@ -51,40 +51,40 @@ public class DocumentModel extends KarteEntryBean
     }
     
     /**
-     * •¶‘î•ñ‚ğ•Ô‚·B
-     * @return •¶‘î•ñ
+     * æ–‡æ›¸æƒ…å ±ã‚’è¿”ã™ã€‚
+     * @return æ–‡æ›¸æƒ…å ±
      */
     public DocInfoModel getDocInfoModel() {
         return docInfo;
     }
     
     /**
-     * •¶‘î•ñ‚ğİ’è‚·‚éB
-     * @param docInfo •¶‘î•ñ
+     * æ–‡æ›¸æƒ…å ±ã‚’è¨­å®šã™ã‚‹ã€‚
+     * @param docInfo æ–‡æ›¸æƒ…å ±
      */
     public void setDocInfoModel(DocInfoModel docInfo) {
         this.docInfo = docInfo;
     }
     
     /**
-     * ƒVƒF[ƒ}‚ğ•Ô‚·B
-     * @return ƒVƒF[ƒ}
+     * ã‚·ã‚§ãƒ¼ãƒã‚’è¿”ã™ã€‚
+     * @return ã‚·ã‚§ãƒ¼ãƒ
      */
     public List<SchemaModel> getSchema() {
         return schema;
     }
     
     /**
-     * ƒVƒF[ƒ}‚ğİ’è‚·‚éB
-     * @param images ƒVƒF[ƒ}
+     * ã‚·ã‚§ãƒ¼ãƒã‚’è¨­å®šã™ã‚‹ã€‚
+     * @param images ã‚·ã‚§ãƒ¼ãƒ
      */
     public void setSchema(List<SchemaModel> images) {
         this.schema = images;
     }
     
     /**
-     * ƒVƒF[ƒ}‚ğ’Ç‰Á‚·‚éB
-     * @param model ƒVƒF[ƒ}
+     * ã‚·ã‚§ãƒ¼ãƒã‚’è¿½åŠ ã™ã‚‹ã€‚
+     * @param model ã‚·ã‚§ãƒ¼ãƒ
      */
     public void addSchema(SchemaModel model) {
         if (this.schema == null) {
@@ -94,7 +94,7 @@ public class DocumentModel extends KarteEntryBean
     }
     
     /**
-     * ƒVƒF[ƒ}ƒRƒŒƒNƒVƒ‡ƒ“‚ğƒNƒŠƒA‚·‚éB
+     * ã‚·ã‚§ãƒ¼ãƒã‚³ãƒ¬ã‚¯ã‚·ãƒ§ãƒ³ã‚’ã‚¯ãƒªã‚¢ã™ã‚‹ã€‚
      */
     public void clearSchema() {
         if (schema != null && schema.size() > 0) {
@@ -117,24 +117,24 @@ public class DocumentModel extends KarteEntryBean
     }
     
     /**
-     * ƒ‚ƒWƒ…[ƒ‹‚ğ•Ô‚·B
-     * @return ƒ‚ƒWƒ…[ƒ‹
+     * ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã‚’è¿”ã™ã€‚
+     * @return ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«
      */
     public List<ModuleModel> getModules() {
         return modules;
     }
     
     /**
-     * ƒ‚ƒWƒ…[ƒ‹‚ğİ’è‚·‚éB
-     * @param modules ƒ‚ƒWƒ…[ƒ‹
+     * ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã‚’è¨­å®šã™ã‚‹ã€‚
+     * @param modules ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«
      */
     public void setModules(List<ModuleModel> modules) {
         this.modules = modules;
     }
     
     /**
-     * ƒ‚ƒWƒ…[ƒ‹ƒ‚ƒfƒ‹‚Ì”z—ñ‚ğ’Ç‰Á‚·‚éB
-     * @param moules ƒ‚ƒWƒ…[ƒ‹ƒ‚ƒfƒ‹‚Ì”z—ñ
+     * ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ãƒ¢ãƒ‡ãƒ«ã®é…åˆ—ã‚’è¿½åŠ ã™ã‚‹ã€‚
+     * @param moules ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ãƒ¢ãƒ‡ãƒ«ã®é…åˆ—
      */
     public void addModule(ModuleModel[] addArray) {
         if (modules == null) {
@@ -144,8 +144,8 @@ public class DocumentModel extends KarteEntryBean
     }
     
     /**
-     * ƒ‚ƒWƒ…[ƒ‹ƒ‚ƒfƒ‹‚ğ’Ç‰Á‚·‚éB
-     * @param value ƒ‚ƒWƒ…[ƒ‹ƒ‚ƒfƒ‹
+     * ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ãƒ¢ãƒ‡ãƒ«ã‚’è¿½åŠ ã™ã‚‹ã€‚
+     * @param value ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ãƒ¢ãƒ‡ãƒ«
      */
     public void addModule(ModuleModel addModule) {
         if (modules == null) {
@@ -155,7 +155,7 @@ public class DocumentModel extends KarteEntryBean
     }
     
     /**
-     * ƒ‚ƒWƒ…[ƒ‹‚ğƒNƒŠƒA‚·‚éB
+     * ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã‚’ã‚¯ãƒªã‚¢ã™ã‚‹ã€‚
      */
     public void clearModules() {
         if (modules != null && modules.size() > 0) {
@@ -164,9 +164,9 @@ public class DocumentModel extends KarteEntryBean
     }
     
     /**
-     * ˆø”‚ÌƒGƒ“ƒeƒBƒeƒB‚ğ‚Âƒ‚ƒWƒ…[ƒ‹ƒ‚ƒfƒ‹‚ğ•Ô‚·B
-     * @param entityName ƒGƒ“ƒeƒBƒeƒB‚Ì–¼‘O
-     * @return ŠY“–‚·‚éƒ‚ƒWƒ…[ƒ‹ƒ‚ƒfƒ‹
+     * å¼•æ•°ã®ã‚¨ãƒ³ãƒ†ã‚£ãƒ†ã‚£ã‚’æŒã¤ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ãƒ¢ãƒ‡ãƒ«ã‚’è¿”ã™ã€‚
+     * @param entityName ã‚¨ãƒ³ãƒ†ã‚£ãƒ†ã‚£ã®åå‰
+     * @return è©²å½“ã™ã‚‹ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ãƒ¢ãƒ‡ãƒ«
      */
     public ModuleModel getModule(String entityName) {
         
@@ -187,9 +187,9 @@ public class DocumentModel extends KarteEntryBean
     }
     
     /**
-     * ˆø”‚ÌƒGƒ“ƒeƒBƒeƒB–¼‚ğ‚Âƒ‚ƒWƒ…[ƒ‹î•ñ‚ğ•Ô‚·B
-     * @param entityName ƒGƒ“ƒeƒBƒeƒB‚Ì–¼‘O
-     * @return ƒ‚ƒWƒ…[ƒ‹î•ñ
+     * å¼•æ•°ã®ã‚¨ãƒ³ãƒ†ã‚£ãƒ†ã‚£åã‚’æŒã¤ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«æƒ…å ±ã‚’è¿”ã™ã€‚
+     * @param entityName ã‚¨ãƒ³ãƒ†ã‚£ãƒ†ã‚£ã®åå‰
+     * @return ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«æƒ…å ±
      */
     public ModuleInfoBean[] getModuleInfo(String entityName) {
         

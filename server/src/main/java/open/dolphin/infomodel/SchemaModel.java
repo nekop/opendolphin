@@ -101,7 +101,7 @@ public class SchemaModel extends KarteEntryBean
     }
     
     /**
-     * �m����y�уC���[�W�ԍ��Ŕ�r����B
+     * 確定日及びイメージ番号で比較する。
      * @param other
      * @return
      */
@@ -109,7 +109,7 @@ public class SchemaModel extends KarteEntryBean
     public int compareTo(Object other) {
         int result = super.compareTo(other);
         if (result == 0) {
-            // primittive �Ȃ̂Ŕ�r��OK
+            // primittive なので比較はOK
             int no1 = getImageNumber();
             int no2 = ((SchemaModel) other).getImageNumber();
             result = no1 - no2;

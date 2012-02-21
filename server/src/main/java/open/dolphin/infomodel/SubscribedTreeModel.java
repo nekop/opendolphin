@@ -21,8 +21,8 @@ package open.dolphin.infomodel;
 import javax.persistence.*;
 
 /**
- * StampTreeXML ‚Ìƒzƒ‹ƒ_ƒNƒ‰ƒXB
- * ƒ†[ƒU‚ªƒCƒ“ƒ|[ƒg‚µ‚Ä‚¢‚éTreeƒNƒ‰ƒXB
+ * StampTreeXML ã®ãƒ›ãƒ«ãƒ€ã‚¯ãƒ©ã‚¹ã€‚
+ * ãƒ¦ãƒ¼ã‚¶ãŒã‚¤ãƒ³ãƒãƒ¼ãƒˆã—ã¦ã„ã‚‹Treeã‚¯ãƒ©ã‚¹ã€‚
  *
  * @author Kazushi Minagawa, Digital Globe, Inc.
  */

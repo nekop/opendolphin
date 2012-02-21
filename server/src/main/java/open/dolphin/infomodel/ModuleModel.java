@@ -28,7 +28,7 @@ public class ModuleModel extends KarteEntryBean
     private DocumentModel document;
     
     /**
-     * ModuleModelƒIƒuƒWƒFƒNƒg‚ğ¶¬‚·‚éB
+     * ModuleModelã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’ç”Ÿæˆã™ã‚‹ã€‚
      */
     public ModuleModel() {
         moduleInfo = new ModuleInfoBean();
@@ -43,56 +43,56 @@ public class ModuleModel extends KarteEntryBean
     }
     
     /**
-     * ƒ‚ƒWƒ…[ƒ‹î•ñ‚ğİ’è‚·‚éB
-     * @param moduleInfo ƒ‚ƒWƒ…[ƒ‹î•ñ
+     * ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«æƒ…å ±ã‚’è¨­å®šã™ã‚‹ã€‚
+     * @param moduleInfo ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«æƒ…å ±
      */
     public void setModuleInfoBean(ModuleInfoBean moduleInfo) {
         this.moduleInfo = moduleInfo;
     }
     
     /**
-     * ƒ‚ƒWƒ…[ƒ‹î•ñ‚ğ•Ô‚·B
-     * @return ƒ‚ƒWƒ…[ƒ‹î•ñ
+     * ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«æƒ…å ±ã‚’è¿”ã™ã€‚
+     * @return ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«æƒ…å ±
      */
     public ModuleInfoBean getModuleInfoBean() {
         return moduleInfo;
     }
     
     /**
-     * ƒ‚ƒWƒ…[ƒ‹‚Ìî•ñƒ‚ƒfƒ‹iÀ‘Ì‚ÌPOJO)‚ğİ’è‚·‚éB
-     * @param model ƒ‚ƒfƒ‹
+     * ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã®æƒ…å ±ãƒ¢ãƒ‡ãƒ«ï¼ˆå®Ÿä½“ã®POJO)ã‚’è¨­å®šã™ã‚‹ã€‚
+     * @param model ãƒ¢ãƒ‡ãƒ«
      */
     public void setModel(IInfoModel model) {
         this.model = model;
     }
     
     /**
-     * ƒ‚ƒWƒ…[ƒ‹‚Ìî•ñƒ‚ƒfƒ‹iÀ‘Ì‚ÌPOJO)‚ğ•Ô‚·B
-     * @return ƒ‚ƒfƒ‹
+     * ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã®æƒ…å ±ãƒ¢ãƒ‡ãƒ«ï¼ˆå®Ÿä½“ã®POJO)ã‚’è¿”ã™ã€‚
+     * @return ãƒ¢ãƒ‡ãƒ«
      */
     public IInfoModel getModel() {
         return model;
     }
     
     /**
-     * ƒ‚ƒWƒ…[ƒ‹‚Ì‰i‘±‰»ƒoƒCƒg”z—ñ‚ğ•Ô‚·B
-     * @return ƒ‚ƒWƒ…[ƒ‹‚Ì‰i‘±‰»ƒoƒCƒg”z—ñ
+     * ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã®æ°¸ç¶šåŒ–ãƒã‚¤ãƒˆé…åˆ—ã‚’è¿”ã™ã€‚
+     * @return ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã®æ°¸ç¶šåŒ–ãƒã‚¤ãƒˆé…åˆ—
      */
     public byte[] getBeanBytes() {
         return beanBytes;
     }
     
     /**
-     * ƒ‚ƒWƒ…[ƒ‹‚Ì‰i‘±‰»ƒoƒCƒg”z—ñ‚ğİ’è‚·‚éB
-     * @param beanBytes ƒ‚ƒWƒ…[ƒ‹‚Ì‰i‘±‰»ƒoƒCƒg”z—ñ
+     * ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã®æ°¸ç¶šåŒ–ãƒã‚¤ãƒˆé…åˆ—ã‚’è¨­å®šã™ã‚‹ã€‚
+     * @param beanBytes ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã®æ°¸ç¶šåŒ–ãƒã‚¤ãƒˆé…åˆ—
      */
     public void setBeanBytes(byte[] beanBytes) {
         this.beanBytes = beanBytes;
     }
     
     /**
-     * ƒhƒLƒ…ƒƒ“ƒg‚ÉŒ»‚ê‚é‡”Ô‚Å”äŠr‚·‚éB
-     * @return ”äŠr’l
+     * ãƒ‰ã‚­ãƒ¥ãƒ¡ãƒ³ãƒˆã«ç¾ã‚Œã‚‹é †ç•ªã§æ¯”è¼ƒã™ã‚‹ã€‚
+     * @return æ¯”è¼ƒå€¤
      */
     @Override
     public int compareTo(Object other) {
@@ -139,7 +139,7 @@ public class ModuleModel extends KarteEntryBean
             }
         }
 
-        // ‰º‹L‚Í—˜—p‘¤‚ÅÄİ’è‚·‚é
+        // ä¸‹è¨˜ã¯åˆ©ç”¨å´ã§å†è¨­å®šã™ã‚‹
         //ret.setKarteBean(this.getKarteBean());
         //ret.setUserModel(this.getUserModel());
         //ret.setDocumentModel(this.getDocumentModel());

@@ -50,7 +50,7 @@ public class KarteEntryBean extends InfoModel implements Comparable {
     
     
     /**
-     * ‚±‚ÌƒGƒ“ƒgƒŠ‚ÌId‚ğ•Ô‚·B
+     * ã“ã®ã‚¨ãƒ³ãƒˆãƒªã®Idã‚’è¿”ã™ã€‚
      * @return Id
      */
     public long getId() {
@@ -58,120 +58,120 @@ public class KarteEntryBean extends InfoModel implements Comparable {
     }
     
     /**
-     * ‚±‚ÌƒGƒ“ƒgƒŠ‚ÌId‚ğİ’è‚·‚éB
-     * @param id ƒGƒ“ƒgƒŠId
+     * ã“ã®ã‚¨ãƒ³ãƒˆãƒªã®Idã‚’è¨­å®šã™ã‚‹ã€‚
+     * @param id ã‚¨ãƒ³ãƒˆãƒªId
      */
     public void setId(long id) {
         this.id = id;
     }
 
     /**
-     * Šm’è“ú‚ğ•Ô‚·B
-     * @return Šm’è“ú
+     * ç¢ºå®šæ—¥æ™‚ã‚’è¿”ã™ã€‚
+     * @return ç¢ºå®šæ—¥æ™‚
      */
     public Date getConfirmed() {
         return confirmed;
     }
 
     /**
-     * Šm’è“ú‚ğİ’è‚·‚éB
-     * @param confirmed Šm’è“ú
+     * ç¢ºå®šæ—¥æ™‚ã‚’è¨­å®šã™ã‚‹ã€‚
+     * @param confirmed ç¢ºå®šæ—¥æ™‚
      */
     public void setConfirmed(Date confirmed) {
         this.confirmed = confirmed;
     }
     
     /**
-     * “K‡ŠJn“ú‚ğ•Ô‚·B
-     * @return ‹L˜^‚Ì“K‡ŠJn“ú(TimeStamp)
+     * é©åˆé–‹å§‹æ—¥ã‚’è¿”ã™ã€‚
+     * @return è¨˜éŒ²ã®é©åˆé–‹å§‹æ—¥(TimeStamp)
      */    
     public Date getStarted() {
         return started;
     }
 
     /**
-     * “K‡ŠJn“ú‚ğİ’è‚·‚éB
-     * @param started ‹L˜^‚Ì“K‡ŠJn“ú(TimeStamp)
+     * é©åˆé–‹å§‹æ—¥ã‚’è¨­å®šã™ã‚‹ã€‚
+     * @param started è¨˜éŒ²ã®é©åˆé–‹å§‹æ—¥(TimeStamp)
      */
     public void setStarted(Date started) {
         this.started = started;
     }
 
     /**
-     * “K‡I—¹“ú‚ğ•Ô‚·B
-     * @return ‚±‚Ì‹L˜^‚Ì“K‡I—¹“ú
+     * é©åˆçµ‚äº†æ—¥ã‚’è¿”ã™ã€‚
+     * @return ã“ã®è¨˜éŒ²ã®é©åˆçµ‚äº†æ—¥æ™‚
      */
     public Date getEnded() {
         return ended;
     }
 
     /**
-     * “K‡I—¹“ú‚ğİ’è‚·‚éB
-     * @param ended ‚±‚Ì‹L˜^‚Ì“K‡I—¹“ú
+     * é©åˆçµ‚äº†æ—¥ã‚’è¨­å®šã™ã‚‹ã€‚
+     * @param ended ã“ã®è¨˜éŒ²ã®é©åˆçµ‚äº†æ—¥æ™‚
      */
     public void setEnded(Date ended) {
         this.ended = ended;
     }
 
     /**
-     * ‹L˜^“ú‚ğ•Ô‚·B
-     * @return ‚±‚ÌƒGƒ“ƒgƒŠ‚Ì‹L˜^“ú
+     * è¨˜éŒ²æ—¥ã‚’è¿”ã™ã€‚
+     * @return ã“ã®ã‚¨ãƒ³ãƒˆãƒªã®è¨˜éŒ²æ—¥æ™‚
      */
     public Date getRecorded() {
         return recorded;
     }
 
     /**
-     * ‹L˜^“ú‚ğİ’è‚·‚éB
-     * @param recorded ‚±‚ÌƒGƒ“ƒgƒŠ‚Ì‹L˜^“ú
+     * è¨˜éŒ²æ—¥ã‚’è¨­å®šã™ã‚‹ã€‚
+     * @param recorded ã“ã®ã‚¨ãƒ³ãƒˆãƒªã®è¨˜éŒ²æ—¥æ™‚
      */
     public void setRecorded(Date recorded) {
         this.recorded = recorded;
     }
     
     /**
-     * ƒGƒ“ƒgƒŠ‚ÌƒŠƒ“ƒNæID‚ğ•Ô‚·B
-     * @return ƒGƒ“ƒgƒŠ‚ÌƒŠƒ“ƒNæID
+     * ã‚¨ãƒ³ãƒˆãƒªã®ãƒªãƒ³ã‚¯å…ˆIDã‚’è¿”ã™ã€‚
+     * @return ã‚¨ãƒ³ãƒˆãƒªã®ãƒªãƒ³ã‚¯å…ˆID
      */
     public long getLinkId() {
         return linkId;
     }
 
     /**
-     * ƒGƒ“ƒgƒŠ‚ÌƒŠƒ“ƒNæID‚ğİ’è‚·‚éB
-     * @param linkId ƒGƒ“ƒgƒŠ‚ÌƒŠƒ“ƒNæID
+     * ã‚¨ãƒ³ãƒˆãƒªã®ãƒªãƒ³ã‚¯å…ˆIDã‚’è¨­å®šã™ã‚‹ã€‚
+     * @param linkId ã‚¨ãƒ³ãƒˆãƒªã®ãƒªãƒ³ã‚¯å…ˆID
      */
     public void setLinkId(long linkId) {
         this.linkId = linkId;
     }
     
     /**
-     * ƒŠƒ“ƒNæ‚Æ‚ÌŠÖŒW‚ğ•Ô‚·B
-     * @return ƒŠƒ“ƒNæ‚Æ‚ÌŠÖŒW
+     * ãƒªãƒ³ã‚¯å…ˆã¨ã®é–¢ä¿‚ã‚’è¿”ã™ã€‚
+     * @return ãƒªãƒ³ã‚¯å…ˆã¨ã®é–¢ä¿‚
      */
     public String getLinkRelation() {
         return linkRelation;
     }
 
     /**
-     * ƒŠƒ“ƒNæ‚Æ‚ÌŠÖŒW‚ğİ’è‚·‚éB
-     * @param linkRelation ƒŠƒ“ƒNæ‚Æ‚ÌŠÖŒW
+     * ãƒªãƒ³ã‚¯å…ˆã¨ã®é–¢ä¿‚ã‚’è¨­å®šã™ã‚‹ã€‚
+     * @param linkRelation ãƒªãƒ³ã‚¯å…ˆã¨ã®é–¢ä¿‚
      */
     public void setLinkRelation(String linkRelation) {
         this.linkRelation = linkRelation;
     }
         
     /**
-     * ‚±‚ÌƒGƒ“ƒgƒŠ‚ÌƒXƒe[ƒ^ƒX‚ğ•Ô‚·B
-     * @return ƒXƒe[ƒ^ƒX
+     * ã“ã®ã‚¨ãƒ³ãƒˆãƒªã®ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ã‚’è¿”ã™ã€‚
+     * @return ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹
      */
     public String getStatus() {
         return status;
     }
 
     /**
-     * ‚±‚ÌƒGƒ“ƒgƒŠ‚ÌƒXƒe[ƒ^ƒX‚ğİ’è‚·‚éB
-     * @param status ƒXƒe[ƒ^ƒX
+     * ã“ã®ã‚¨ãƒ³ãƒˆãƒªã®ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ã‚’è¨­å®šã™ã‚‹ã€‚
+     * @param status ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹
      */
     public void setStatus(String status) {
         this.status = status;
@@ -179,23 +179,23 @@ public class KarteEntryBean extends InfoModel implements Comparable {
 
     
     /**
-     * Creator‚ğ•Ô‚·B
-     * @return Creator (ƒVƒXƒeƒ€‚Ìƒ†[ƒU)
+     * Creatorã‚’è¿”ã™ã€‚
+     * @return Creator (ã‚·ã‚¹ãƒ†ãƒ ã®ãƒ¦ãƒ¼ã‚¶)
      */
     public UserModel getUserModel() {
         return creator;
     }
     
     /**
-     * Creator ‚ğİ’è‚·‚éB
-     * @param creator ‚±‚ÌƒGƒ“ƒgƒŠ‚Ì‹LqÒ
+     * Creator ã‚’è¨­å®šã™ã‚‹ã€‚
+     * @param creator ã“ã®ã‚¨ãƒ³ãƒˆãƒªã®è¨˜è¿°è€…
      */
     public void setUserModel(UserModel creator) {
         this.creator = creator;
     }
     
     /**
-     * ƒJƒ‹ƒe‚ğ•Ô‚·B
+     * ã‚«ãƒ«ãƒ†ã‚’è¿”ã™ã€‚
      * @return Karte
      */
     public KarteBean getKarteBean() {
@@ -203,7 +203,7 @@ public class KarteEntryBean extends InfoModel implements Comparable {
     }
     
     /**
-     * ƒJƒ‹ƒe‚ğİ’è‚·‚éB
+     * ã‚«ãƒ«ãƒ†ã‚’è¨­å®šã™ã‚‹ã€‚
      * @param karte Karte
      */
     public void setKarteBean(KarteBean karte) {
@@ -233,8 +233,8 @@ public class KarteEntryBean extends InfoModel implements Comparable {
     }
     
     /**
-     * “K‡ŠJn“ú‚ÆŠm’è“ú‚Å”äŠr‚·‚éB
-     * @return Comparable ‚Ì”äŠr’l
+     * é©åˆé–‹å§‹æ—¥ã¨ç¢ºå®šæ—¥ã§æ¯”è¼ƒã™ã‚‹ã€‚
+     * @return Comparable ã®æ¯”è¼ƒå€¤
      */    
     @Override
     public int compareTo(Object other) {
@@ -265,7 +265,7 @@ public class KarteEntryBean extends InfoModel implements Comparable {
     }
     
     //
-    // ŒİŠ·«—p‚ÌƒvƒƒLƒVƒR[ƒh
+    // äº’æ›æ€§ç”¨ã®ãƒ—ãƒ­ã‚­ã‚·ã‚³ãƒ¼ãƒ‰
     //
     public Date getFirstConfirmed() {
         return getStarted();
@@ -293,7 +293,7 @@ public class KarteEntryBean extends InfoModel implements Comparable {
     
       
     //
-    // ‘«êƒR[ƒh  Date
+    // è¶³å ´ã‚³ãƒ¼ãƒ‰  Date
     //
     public String firstConfirmDateAsString() {
         return dateAsString(getFirstConfirmed());
@@ -321,7 +321,7 @@ public class KarteEntryBean extends InfoModel implements Comparable {
     }
     
     //
-    // ‘«êƒR[ƒh  TimeStamp
+    // è¶³å ´ã‚³ãƒ¼ãƒ‰  TimeStamp
     //
     public String confirmedTimeStampAsString() {
         return timeStampAsString(getConfirmed());

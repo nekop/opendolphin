@@ -33,13 +33,13 @@ public class BundleMed extends BundleDolphin {
     public String getAdminDisplayString() {
         
         //
-        // —p–@‚ª null ‚Ìê‡‚ ‚è
+        // ç”¨æ³•ãŒ null ã®å ´åˆã‚ã‚Š
         //
         StringBuilder buf = new StringBuilder();
         
         if (admin != null && (!admin.equals(""))) {
         
-            if (admin.startsWith("“à•")) {
+            if (admin.startsWith("å†…æœ")) {
                 buf.append(admin.substring(0,2));
                 buf.append(" ");
                 buf.append(admin.substring(4));
@@ -53,9 +53,9 @@ public class BundleMed extends BundleDolphin {
         buf.append(bundleNumber);
         
         if (admin != null && (!admin.equals(""))) {
-            if (admin.startsWith("“à•")) {
-                if (admin.charAt(3) == '‰ñ') {
-                    buf.append(" “ú•ª");
+            if (admin.startsWith("å†…æœ")) {
+                if (admin.charAt(3) == 'å›') {
+                    buf.append(" æ—¥åˆ†");
                 }
             }
         }
@@ -77,10 +77,10 @@ public class BundleMed extends BundleDolphin {
         
         for (int i = 0; i < len; i++) {
             item = items[i];
-            sb.append("E").append(item.getName());
+            sb.append("ãƒ»").append(item.getName());
             number = item.getNumber();
             if (number != null) {
-                sb.append("@").append(number);
+                sb.append("ã€€").append(number);
                 if (item.getUnit() != null) {
                     sb.append(item.getUnit());
                 }

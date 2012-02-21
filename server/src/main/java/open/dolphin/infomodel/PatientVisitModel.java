@@ -24,52 +24,52 @@ public class PatientVisitModel extends InfoModel implements java.io.Serializable
     @Id @GeneratedValue(strategy=GenerationType.AUTO)
     private long id;
     
-    /** Š³Ò */
+    /** æ‚£è€… */
     @ManyToOne
     @JoinColumn(name="patient_id", nullable=false)
     private PatientModel patient;
     
-    /** {İID  */
+    /** æ–½è¨­ID  */
     @Column(nullable=false)
     private String facilityId;
     
-    /** ó•tƒŠƒXƒgã‚Ì”Ô† */
+    /** å—ä»˜ãƒªã‚¹ãƒˆä¸Šã®ç•ªå· */
     @Transient
     private int number;
     
-    /** —ˆ‰@ŠÔ */
+    /** æ¥é™¢æ™‚é–“ */
     @Column(nullable=false)
     private String pvtDate;
     
-    /** —\–ñ */
+    /** äºˆç´„ */
     @Transient
     private String appointment;
     
-    /** f—Ã‰È */
+    /** è¨ºç™‚ç§‘ */
     private String department;
     
-    /** I—¹ƒtƒ‰ƒO */
+    /** çµ‚äº†ãƒ•ãƒ©ã‚° */
     private int status;
     
-    /** Œ’N•ÛŒ¯GUID 2006-05-01 */
+    /** å¥åº·ä¿é™ºGUID 2006-05-01 */
     private String insuranceUid;
 
     //----------------------------------------------
-    // 2.0 ‚Å’Ç‰Á
-    private String deptCode;        // f—Ã‰ÈƒR[ƒh
-    private String deptName;        // f—Ã‰È–¼
-    private String doctorId;        // ORCA‚Å‚Ì’S“–ˆãƒR[ƒh
-    private String doctorName;      // ’S“–ˆã–¼
+    // 2.0 ã§è¿½åŠ 
+    private String deptCode;        // è¨ºç™‚ç§‘ã‚³ãƒ¼ãƒ‰
+    private String deptName;        // è¨ºç™‚ç§‘å
+    private String doctorId;        // ORCAã§ã®æ‹…å½“åŒ»ã‚³ãƒ¼ãƒ‰
+    private String doctorName;      // æ‹…å½“åŒ»å
     private String jmariNumber;     // JMARI code
-    private String firstInsurance;  // ó‚¯•t‚¯‚½Œ’N•ÛŒ¯
+    private String firstInsurance;  // å—ã‘ä»˜ã‘ãŸå¥åº·ä¿é™º
     private String memo;
 
     @Transient
-    private String watingTime;      // ‘Ò‚¿ŠÔ
+    private String watingTime;      // å¾…ã¡æ™‚é–“
     //----------------------------------------------
     
     /**
-     * PatientVisitModelƒIƒuƒWƒFƒNƒg‚ğ¶¬‚·‚éB
+     * PatientVisitModelã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’ç”Ÿæˆã™ã‚‹ã€‚
      */
     public PatientVisitModel() {
     }
@@ -83,15 +83,15 @@ public class PatientVisitModel extends InfoModel implements java.io.Serializable
     }
     
     /**
-     * Š³Òƒ‚ƒfƒ‹‚ğ•Ô‚·B
-     * @return Š³Òƒ‚ƒfƒ‹
+     * æ‚£è€…ãƒ¢ãƒ‡ãƒ«ã‚’è¿”ã™ã€‚
+     * @return æ‚£è€…ãƒ¢ãƒ‡ãƒ«
      */
     public PatientModel getPatientModel() {
         return patient;
     }
     
     /**
-     * Š³Òƒ‚ƒfƒ‹‚ğİ’è‚·‚éB
+     * æ‚£è€…ãƒ¢ãƒ‡ãƒ«ã‚’è¨­å®šã™ã‚‹ã€‚
      * @param patientModel
      */
     public void setPatientModel(PatientModel patientModel) {
@@ -99,16 +99,16 @@ public class PatientVisitModel extends InfoModel implements java.io.Serializable
     }
     
     /**
-     * {İID‚ğ•Ô‚·B
-     * @return {İID
+     * æ–½è¨­IDã‚’è¿”ã™ã€‚
+     * @return æ–½è¨­ID
      */
     public String getFacilityId() {
         return facilityId;
     }
     
     /**
-     * {İID‚ğİ’è‚·‚éB
-     * @param facilityId {İID
+     * æ–½è¨­IDã‚’è¨­å®šã™ã‚‹ã€‚
+     * @param facilityId æ–½è¨­ID
      */
     public void setFacilityId(String facilityId) {
         this.facilityId = facilityId;
@@ -116,48 +116,48 @@ public class PatientVisitModel extends InfoModel implements java.io.Serializable
     
     
     /**
-     * ƒŠƒXƒg”Ô†‚ğİ’è‚·‚éB
-     * @param number ƒŠƒXƒg”Ô†
+     * ãƒªã‚¹ãƒˆç•ªå·ã‚’è¨­å®šã™ã‚‹ã€‚
+     * @param number ãƒªã‚¹ãƒˆç•ªå·
      */
     public void setNumber(int number) {
         this.number = number;
     }
     
     /**
-     * ƒŠƒXƒg”Ô†‚ğ•Ô‚·B
-     * @return ƒŠƒXƒg”Ô†
+     * ãƒªã‚¹ãƒˆç•ªå·ã‚’è¿”ã™ã€‚
+     * @return ãƒªã‚¹ãƒˆç•ªå·
      */
     public int getNumber() {
         return number;
     }
     
     /**
-     * —ˆ‰@“ú‚ğİ’è‚·‚éB
-     * @param time —ˆ‰@“ú yyyy-MM-ddTHH:mmss
+     * æ¥é™¢æ—¥æ™‚ã‚’è¨­å®šã™ã‚‹ã€‚
+     * @param time æ¥é™¢æ—¥æ™‚ yyyy-MM-ddTHH:mmss
      */
     public void setPvtDate(String time) {
         this.pvtDate = time;
     }
     
     /**
-     * —ˆ‰@“ú‚ğ•Ô‚·B
-     * @return —ˆ‰@“ú yyyy-MM-ddTHH:mmss
+     * æ¥é™¢æ—¥æ™‚ã‚’è¿”ã™ã€‚
+     * @return æ¥é™¢æ—¥æ™‚ yyyy-MM-ddTHH:mmss
      */
     public String getPvtDate() {
         return pvtDate;
     }
     
     /**
-     * —ˆ‰@“ú‚Ì“ú•t•”•ª‚ğ•Ô‚·B
-     * @return —ˆ‰@“ú‚Ì“ú•t•”•ª
+     * æ¥é™¢æ—¥æ™‚ã®æ—¥ä»˜éƒ¨åˆ†ã‚’è¿”ã™ã€‚
+     * @return æ¥é™¢æ—¥æ™‚ã®æ—¥ä»˜éƒ¨åˆ†
      */
     public String getPvtDateTrimTime() {
         return ModelUtils.trimTime(pvtDate);
     }
     
     /**
-     * —ˆ‰@“ú‚ÌŠÔ•”•ª‚ğ•Ô‚·B
-     * @return —ˆ‰@“ú‚ÌŠÔ•”•ª
+     * æ¥é™¢æ—¥æ™‚ã®æ™‚é–“éƒ¨åˆ†ã‚’è¿”ã™ã€‚
+     * @return æ¥é™¢æ—¥æ™‚ã®æ™‚é–“éƒ¨åˆ†
      */
     public String getPvtDateTrimDate() {
         return ModelUtils.trimDate(pvtDate);
@@ -168,41 +168,41 @@ public class PatientVisitModel extends InfoModel implements java.io.Serializable
     }
     
     /**
-     * —\–ñ‚ª‚ ‚é‚©‚Ç‚¤‚©‚ğİ’è‚·‚éB
-     * @param appointment —\–ñ‚ª‚ ‚é true
+     * äºˆç´„ãŒã‚ã‚‹ã‹ã©ã†ã‹ã‚’è¨­å®šã™ã‚‹ã€‚
+     * @param appointment äºˆç´„ãŒã‚ã‚‹æ™‚ true
      */
     public void setAppointment(String appointment) {
         this.appointment = appointment;
     }
     
     /**
-     * ó•tf—Ã‰È‚ğİ’è‚·‚éB
-     * @param department ó•tf—Ã‰È
+     * å—ä»˜è¨ºç™‚ç§‘ã‚’è¨­å®šã™ã‚‹ã€‚
+     * @param department å—ä»˜è¨ºç™‚ç§‘
      */
     public void setDepartment(String department) {
         this.department = department;
     }
     
     /**
-     * ó•tf—Ã‰È‚ğ•Ô‚·B
-     * @return ó•tf—Ã‰È–¼
+     * å—ä»˜è¨ºç™‚ç§‘ã‚’è¿”ã™ã€‚
+     * @return å—ä»˜è¨ºç™‚ç§‘å
      */
     public String getDepartment() {
-//        // 1.3 ‚Ü‚Å‚Ìb’è
+//        // 1.3 ã¾ã§ã®æš«å®š
 //        String[] tokens = tokenizeDept(department);
 //        return tokens[0];
 
-        // 2.0 ‚©‚ç
+        // 2.0 ã‹ã‚‰
         return department;
     }
     
     /**
-     * department ‚ğ , ‚Å•ª‰ğ‚·‚é
+     * department ã‚’ , ã§åˆ†è§£ã™ã‚‹
      */
     private String[] tokenizeDept(String dept) {
         
-        // f—Ã‰È–¼AƒR[ƒhA’S“–ˆã–¼A’S“–ˆãƒR[ƒhAJMARI ƒR[ƒh
-        // ‚ğŠi”[‚·‚é”z—ñ‚ğ¶¬‚·‚é
+        // è¨ºç™‚ç§‘åã€ã‚³ãƒ¼ãƒ‰ã€æ‹…å½“åŒ»åã€æ‹…å½“åŒ»ã‚³ãƒ¼ãƒ‰ã€JMARI ã‚³ãƒ¼ãƒ‰
+        // ã‚’æ ¼ç´ã™ã‚‹é…åˆ—ã‚’ç”Ÿæˆã™ã‚‹
         String[] ret = new String[5];
         Arrays.fill(ret, null);
         
@@ -219,16 +219,16 @@ public class PatientVisitModel extends InfoModel implements java.io.Serializable
     }
     
     /**
-     * ƒJƒ‹ƒe‚Ìó‘Ô‚ğİ’è‚·‚éB
-     * @param state ƒJƒ‹ƒe‚Ìó‘Ô
+     * ã‚«ãƒ«ãƒ†ã®çŠ¶æ…‹ã‚’è¨­å®šã™ã‚‹ã€‚
+     * @param state ã‚«ãƒ«ãƒ†ã®çŠ¶æ…‹
      */
     public void setState(int state) {
         this.status = state;
     }
     
     /**
-     * ƒJƒ‹ƒe‚Ìó‘Ô‚ğ•Ô‚·B
-     * @return ƒJƒ‹ƒe‚Ìó‘Ô
+     * ã‚«ãƒ«ãƒ†ã®çŠ¶æ…‹ã‚’è¿”ã™ã€‚
+     * @return ã‚«ãƒ«ãƒ†ã®çŠ¶æ…‹
      */
     public int getState() {
         return status;
@@ -239,40 +239,40 @@ public class PatientVisitModel extends InfoModel implements java.io.Serializable
     }
     
     /**
-     * Š³ÒID‚ğ•Ô‚·B
-     * @return Š³ÒID
+     * æ‚£è€…IDã‚’è¿”ã™ã€‚
+     * @return æ‚£è€…ID
      */
     public String getPatientId() {
         return getPatientModel().getPatientId();
     }
     
     /**
-     * Š³Ò–¼‚ğ•Ô‚·B
-     * @return Š³Ò–¼
+     * æ‚£è€…æ°åã‚’è¿”ã™ã€‚
+     * @return æ‚£è€…æ°å
      */
     public String getPatientName() {
         return getPatientModel().getFullName();
     }
     
     /**
-     * Š³Ò«•Êà–¾‚ğ•Ô‚·B
-     * @return «•Êà–¾
+     * æ‚£è€…æ€§åˆ¥èª¬æ˜ã‚’è¿”ã™ã€‚
+     * @return æ€§åˆ¥èª¬æ˜
      */
     public String getPatientGenderDesc() {
         return ModelUtils.getGenderDesc(getPatientModel().getGender());
     }
     
     /**
-     * Š³Ò‚Ì”N—î‚Æ¶”NŒ“ú‚Ì•\¦‚ğ•Ô‚·B
-     * @return Š³Ò‚Ì”N—î‚Æ¶”NŒ“ú
+     * æ‚£è€…ã®å¹´é½¢ã¨ç”Ÿå¹´æœˆæ—¥ã®è¡¨ç¤ºã‚’è¿”ã™ã€‚
+     * @return æ‚£è€…ã®å¹´é½¢ã¨ç”Ÿå¹´æœˆæ—¥
      */
     public String getPatientAgeBirthday() {
         return ModelUtils.getAgeBirthday(getPatientModel().getBirthday());
     }
     
     /**
-     * Š³Ò‚Ì¶”NŒ“ú‚Ì•\¦‚ğ•Ô‚·B
-     * @return Š³Ò‚Ì”N—î‚Æ¶”NŒ“ú
+     * æ‚£è€…ã®ç”Ÿå¹´æœˆæ—¥ã®è¡¨ç¤ºã‚’è¿”ã™ã€‚
+     * @return æ‚£è€…ã®å¹´é½¢ã¨ç”Ÿå¹´æœˆæ—¥
      */
     public String getPatientBirthday() {
         return getPatientModel().getBirthday();
@@ -291,7 +291,7 @@ public class PatientVisitModel extends InfoModel implements java.io.Serializable
         if (deptName!=null) {
             return deptName;
         }
-        // 2.0 ˆÈ‘O‚ÌƒŒƒR[ƒh
+        // 2.0 ä»¥å‰ã®ãƒ¬ã‚³ãƒ¼ãƒ‰
         String[] tokens = tokenizeDept(department);
         return tokens[0];
     }
@@ -304,7 +304,7 @@ public class PatientVisitModel extends InfoModel implements java.io.Serializable
         if (deptCode!=null) {
             return deptCode;
         }
-        // 2.0 ˆÈ‘O‚ÌƒŒƒR[ƒh
+        // 2.0 ä»¥å‰ã®ãƒ¬ã‚³ãƒ¼ãƒ‰
         String[] tokens = tokenizeDept(department);
         return tokens[1];
     }
@@ -317,7 +317,7 @@ public class PatientVisitModel extends InfoModel implements java.io.Serializable
         if (doctorName!=null) {
             return doctorName;
         }
-        // 2.0 ˆÈ‘O‚ÌƒŒƒR[ƒh
+        // 2.0 ä»¥å‰ã®ãƒ¬ã‚³ãƒ¼ãƒ‰
         String[] tokens = tokenizeDept(department);
         return tokens[2];
     }
@@ -330,7 +330,7 @@ public class PatientVisitModel extends InfoModel implements java.io.Serializable
         if (doctorId!=null) {
             return doctorId;
         }
-        // 2.0 ˆÈ‘O‚ÌƒŒƒR[ƒh
+        // 2.0 ä»¥å‰ã®ãƒ¬ã‚³ãƒ¼ãƒ‰
         String[] tokens = tokenizeDept(department);
         return tokens[3];
     }
@@ -343,7 +343,7 @@ public class PatientVisitModel extends InfoModel implements java.io.Serializable
         if (jmariNumber!=null) {
             return jmariNumber;
         }
-        // 2.0 ˆÈ‘O‚ÌƒŒƒR[ƒh
+        // 2.0 ä»¥å‰ã®ãƒ¬ã‚³ãƒ¼ãƒ‰
         String[] tokens = tokenizeDept(department);
         return tokens[4];
     }
@@ -369,7 +369,7 @@ public class PatientVisitModel extends InfoModel implements java.io.Serializable
     }
 
     //---------------------------------------------------
-    // ó‚¯•t‚¯‚½•ÛŒ¯‚ğ•Ô‚·
+    // å—ã‘ä»˜ã‘ãŸä¿é™ºã‚’è¿”ã™
     //---------------------------------------------------
     public String getHealthInsuranceInfo() {
 
@@ -405,7 +405,7 @@ public class PatientVisitModel extends InfoModel implements java.io.Serializable
 
 
     //---------------------------------------------------
-    //              ‘Ò‚¿ŠÔ•\¦
+    //              å¾…ã¡æ™‚é–“è¡¨ç¤º
     //---------------------------------------------------
     public String getWatingTime() {
         return watingTime;
@@ -416,7 +416,7 @@ public class PatientVisitModel extends InfoModel implements java.io.Serializable
     }
 
     //---------------------------------------------------
-    // f—Ã‰ÈA’S“–ˆãAJMARI ƒR[ƒh‚Ìî•ñ‚ğ•Ô‚·B 2.0
+    // è¨ºç™‚ç§‘ã€æ‹…å½“åŒ»ã€JMARI ã‚³ãƒ¼ãƒ‰ã®æƒ…å ±ã‚’è¿”ã™ã€‚ 2.0
     //---------------------------------------------------
     public String getDeptDoctorJmariInfo() {
         StringBuilder sb = new StringBuilder();
@@ -429,7 +429,7 @@ public class PatientVisitModel extends InfoModel implements java.io.Serializable
     }
 
     //---------------------------------------------------
-    //              Transferable ˆ—
+    //              Transferable å‡¦ç†
     //---------------------------------------------------
     public boolean isDataFlavorSupported(DataFlavor df) {
         return df.equals(PVT_FLAVOR);

@@ -22,7 +22,7 @@ package open.dolphin.infomodel;
 import javax.persistence.Embeddable;
 
 /**
- * Diagnosis ‚ÌƒJƒeƒSƒŠ[ƒ‚ƒfƒ‹B
+ * Diagnosis ã®ã‚«ãƒ†ã‚´ãƒªãƒ¼ãƒ¢ãƒ‡ãƒ«ã€‚
  *
  * @author Kazushi Minagawa, Digital Globe, Inc.
  */

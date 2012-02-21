@@ -21,7 +21,7 @@ package open.dolphin.infomodel;
 import java.util.ArrayList;
 
 /**
- * ORCA ‚Ì tbl_inputcd ƒGƒ“ƒeƒBƒeƒBƒNƒ‰ƒXB
+ * ORCA ã® tbl_inputcd ã‚¨ãƒ³ãƒ†ã‚£ãƒ†ã‚£ã‚¯ãƒ©ã‚¹ã€‚
  *
  * @author Minagawa, Kazushi
  */

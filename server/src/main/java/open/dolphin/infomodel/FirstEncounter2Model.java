@@ -4,7 +4,7 @@ import java.util.Collection;
 import javax.persistence.*;
 
 /**
- * 瀬田クリニック版初診時情報2
+ * 轢ｬ逕ｰ繧ｯ繝ｪ繝九ャ繧ｯ迚亥�晁ｨｺ譎よュ蝣ｱ2
  */
 @Entity
 @Inheritance(strategy=InheritanceType.SINGLE_TABLE)

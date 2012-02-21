@@ -256,9 +256,9 @@ public class ModelUtils implements IInfoModel {
 
         if (gender != null) {
             String test = gender.toLowerCase();
-            if (test.startsWith("m") || test.startsWith("’j") ) {
+            if (test.startsWith("m") || test.startsWith("ç”·") ) {
                 return "M";
-            } else if (test.startsWith("f") || test.startsWith("—") ) {
+            } else if (test.startsWith("f") || test.startsWith("å¥³") ) {
                 return "F";
             } else {
                 return "U";

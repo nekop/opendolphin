@@ -22,7 +22,7 @@ public class TelephoneModel  extends InfoModel {
 
     private String number;
 
-    // ‚³‚·‚ª‚É•s—v‚Å‚ÍH
+    // ã•ã™ãŒã«ä¸è¦ã§ã¯ï¼Ÿ
     private String extension;
 
     private String memo;

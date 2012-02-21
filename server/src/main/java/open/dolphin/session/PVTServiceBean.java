@@ -42,9 +42,9 @@ public class PVTServiceBean implements PVTServiceBeanLocal {
     private EntityManager em;
 
     /**
-     * Š³Ò—ˆ‰@î•ñ‚ğ“o˜^‚·‚éB
-     * @param spec —ˆ‰@î•ñ‚ğ•Û‚·‚é DTO ƒIƒuƒWƒFƒNƒg
-     * @return “o˜^ŒÂ”
+     * æ‚£è€…æ¥é™¢æƒ…å ±ã‚’ç™»éŒ²ã™ã‚‹ã€‚
+     * @param spec æ¥é™¢æƒ…å ±ã‚’ä¿æŒã™ã‚‹ DTO ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ
+     * @return ç™»éŒ²å€‹æ•°
      */
     @Override
     public int addPvt(PatientVisitModel pvt) {
@@ -53,7 +53,7 @@ public class PVTServiceBean implements PVTServiceBeanLocal {
         String fid = pvt.getFacilityId();
 
         //--------------------------------------------
-        // “ñd“o˜^‚ğƒ`ƒFƒbƒN‚·‚é
+        // äºŒé‡ç™»éŒ²ã‚’ãƒã‚§ãƒƒã‚¯ã™ã‚‹
         //--------------------------------------------
         try {
             List<PatientVisitModel> list = (List<PatientVisitModel>)em
@@ -73,7 +73,7 @@ public class PVTServiceBean implements PVTServiceBeanLocal {
             return 0;
         }
 
-        // Šù‘¶‚ÌŠ³Ò‚©‚Ç‚¤‚©’²‚×‚é
+        // æ—¢å­˜ã®æ‚£è€…ã‹ã©ã†ã‹èª¿ã¹ã‚‹
         try {
             PatientModel exist = (PatientModel) em
                     .createQuery(QUERY_PATIENT_BY_FID_PID)
@@ -82,23 +82,23 @@ public class PVTServiceBean implements PVTServiceBeanLocal {
                     .getSingleResult();
 
             //-----------------------------
-            // Œ’N•ÛŒ¯î•ñ‚ğXV‚·‚é
+            // å¥åº·ä¿é™ºæƒ…å ±ã‚’æ›´æ–°ã™ã‚‹
             //-----------------------------
             Collection<HealthInsuranceModel> ins = patient.getHealthInsurances();
             if (ins != null && ins.size() > 0) {
 
-                // Œ’N•ÛŒ¯‚ğXV‚·‚é
+                // å¥åº·ä¿é™ºã‚’æ›´æ–°ã™ã‚‹
                 Collection old = em.createQuery(QUERY_INSURANCE_BY_PATIENT_ID)
                 .setParameter(ID, exist.getId())
                 .getResultList();
 
-                // Œ»İ‚Ì•ÛŒ¯î•ñ‚ğíœ‚·‚é
+                // ç¾åœ¨ã®ä¿é™ºæƒ…å ±ã‚’å‰Šé™¤ã™ã‚‹
                 for (Iterator iter = old.iterator(); iter.hasNext(); ) {
                     HealthInsuranceModel model = (HealthInsuranceModel) iter.next();
                     em.remove(model);
                 }
 
-                // V‚µ‚¢Œ’N•ÛŒ¯î•ñ‚ğ“o˜^‚·‚é
+                // æ–°ã—ã„å¥åº·ä¿é™ºæƒ…å ±ã‚’ç™»éŒ²ã™ã‚‹
                 Collection<HealthInsuranceModel> newOne = patient.getHealthInsurances();
                 for (HealthInsuranceModel model : newOne) {
                     model.setPatient(exist);
@@ -106,7 +106,7 @@ public class PVTServiceBean implements PVTServiceBeanLocal {
                 }
             }
 
-            // –¼‘O‚ğXV‚·‚é 2007-04-12
+            // åå‰ã‚’æ›´æ–°ã™ã‚‹ 2007-04-12
             exist.setFamilyName(patient.getFamilyName());
             exist.setGivenName(patient.getGivenName());
             exist.setFullName(patient.getFullName());
@@ -117,7 +117,7 @@ public class PVTServiceBean implements PVTServiceBeanLocal {
             exist.setRomanGivenName(patient.getRomanGivenName());
             exist.setRomanName(patient.getRomanName());
 
-            // «•Ê
+            // æ€§åˆ¥
             exist.setGender(patient.getGender());
             exist.setGenderDesc(patient.getGenderDesc());
             exist.setGenderCodeSys(patient.getGenderCodeSys());
@@ -125,29 +125,29 @@ public class PVTServiceBean implements PVTServiceBeanLocal {
             // Birthday
             exist.setBirthday(patient.getBirthday());
 
-            // ZŠA“d˜b‚ğXV‚·‚é
+            // ä½æ‰€ã€é›»è©±ã‚’æ›´æ–°ã™ã‚‹
             exist.setSimpleAddressModel(patient.getSimpleAddressModel());
             exist.setTelephone(patient.getTelephone());
             //exist.setMobilePhone(patient.getMobilePhone());
 
-            // PatientVisit ‚Æ‚ÌŠÖŒW‚ğİ’è‚·‚é
+            // PatientVisit ã¨ã®é–¢ä¿‚ã‚’è¨­å®šã™ã‚‹
             pvt.setPatientModel(exist);
 
         } catch (NoResultException e) {
-            // V‹KŠ³Ò‚Å‚ ‚ê‚Î“o˜^‚·‚é
-            // Š³Ò‘®«‚Í cascade=PERSIST ‚Å©“®“I‚É•Û‘¶‚³‚ê‚é
+            // æ–°è¦æ‚£è€…ã§ã‚ã‚Œã°ç™»éŒ²ã™ã‚‹
+            // æ‚£è€…å±æ€§ã¯ cascade=PERSIST ã§è‡ªå‹•çš„ã«ä¿å­˜ã•ã‚Œã‚‹
             em.persist(patient);
 
-            // ‚±‚ÌŠ³Ò‚ÌƒJƒ‹ƒe‚ğ¶¬‚·‚é
+            // ã“ã®æ‚£è€…ã®ã‚«ãƒ«ãƒ†ã‚’ç”Ÿæˆã™ã‚‹
             KarteBean karte = new KarteBean();
             karte.setPatientModel(patient);
             karte.setCreated(new Date());
             em.persist(karte);
         }
 
-        // —ˆ‰@î•ñ‚ğ“o˜^‚·‚é
-        // CLAIM ‚Ìd—l‚É‚æ‚èŠ³Òî•ñ‚Ì‚İ‚ğ“o˜^‚µA—ˆ‰@î•ñ‚Í‚È‚¢ê‡‚ª‚ ‚é
-        // ‚»‚ê‚ğ pvtDate ‚Ì‘®«‚Å”»’f‚µ‚Ä‚¢‚é
+        // æ¥é™¢æƒ…å ±ã‚’ç™»éŒ²ã™ã‚‹
+        // CLAIM ã®ä»•æ§˜ã«ã‚ˆã‚Šæ‚£è€…æƒ…å ±ã®ã¿ã‚’ç™»éŒ²ã—ã€æ¥é™¢æƒ…å ±ã¯ãªã„å ´åˆãŒã‚ã‚‹
+        // ãã‚Œã‚’ pvtDate ã®å±æ€§ã§åˆ¤æ–­ã—ã¦ã„ã‚‹
         if (pvt.getPvtDate() != null) {
             em.persist(pvt);
         }
@@ -156,9 +156,9 @@ public class PVTServiceBean implements PVTServiceBeanLocal {
     }
 
     /**
-     * {İ‚ÌŠ³Ò—ˆ‰@î•ñ‚ğæ“¾‚·‚éB
-     * @param spec ŒŸõd—lDTOƒIƒuƒWƒFƒNƒg
-     * @return —ˆ‰@î•ñ‚ÌCollection
+     * æ–½è¨­ã®æ‚£è€…æ¥é™¢æƒ…å ±ã‚’å–å¾—ã™ã‚‹ã€‚
+     * @param spec æ¤œç´¢ä»•æ§˜DTOã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ
+     * @return æ¥é™¢æƒ…å ±ã®Collection
      */
     @Override
     public List<PatientVisitModel> getPvt(String fid, String date, int firstResult, String appoDateFrom, String appoDateTo) {
@@ -167,7 +167,7 @@ public class PVTServiceBean implements PVTServiceBeanLocal {
             date += PERCENT;
         }
         
-        // PatientVisitModel‚ğ{İID‚ÅŒŸõ‚·‚é
+        // PatientVisitModelã‚’æ–½è¨­IDã§æ¤œç´¢ã™ã‚‹
         List<PatientVisitModel> result =
                 (List<PatientVisitModel>) em.createQuery(QUERY_PVT_BY_FID_DATE)
                               .setParameter(FID, fid)
@@ -186,24 +186,24 @@ public class PVTServiceBean implements PVTServiceBeanLocal {
 
         boolean searchAppo = (appoDateFrom != null && appoDateTo != null) ? true : false;
 
-        // —ˆ‰@î•ñ‚ÆŠ³Ò‚Í ManyToOne ‚ÌŠÖŒW‚Å‚ ‚é
+        // æ¥é™¢æƒ…å ±ã¨æ‚£è€…ã¯ ManyToOne ã®é–¢ä¿‚ã§ã‚ã‚‹
         for (int i = 0; i < len; i++) {
             //for (int i = firstResult; i < len; i++) {
             
             PatientVisitModel pvt = result.get(i);
             PatientModel patient = pvt.getPatientModel();
 
-            // Š³Ò‚ÌŒ’N•ÛŒ¯‚ğæ“¾‚·‚é
+            // æ‚£è€…ã®å¥åº·ä¿é™ºã‚’å–å¾—ã™ã‚‹
             List<HealthInsuranceModel> insurances = (List<HealthInsuranceModel>)em.createQuery(QUERY_INSURANCE_BY_PATIENT_ID)
             .setParameter(ID, patient.getId()).getResultList();
             patient.setHealthInsurances(insurances);
 
-            // —\–ñ‚ğŒŸõ‚·‚é
+            // äºˆç´„ã‚’æ¤œç´¢ã™ã‚‹
             if (searchAppo) {
                 KarteBean karte = (KarteBean)em.createQuery(QUERY_KARTE_BY_PATIENT_ID)
                 .setParameter(ID, patient.getId())
                 .getSingleResult();
-                // ƒJƒ‹ƒe‚Ì PK ‚ğ“¾‚é
+                // ã‚«ãƒ«ãƒ†ã® PK ã‚’å¾—ã‚‹
                 long karteId = karte.getId();
 
                 List c = em.createQuery(QUERY_APPO_BY_KARTE_ID_DATE)
@@ -212,7 +212,7 @@ public class PVTServiceBean implements PVTServiceBeanLocal {
                 .getResultList();
                 //System.err.println("appo size = " + c.size());
                 if (c != null && c.size() > 0) {
-                    // “–“ú‚Ì—\–ñ‚ÅÅ‰‚Ì‚à‚Ì
+                    // å½“æ—¥ã®äºˆç´„ã§æœ€åˆã®ã‚‚ã®
                     AppointmentModel appo = (AppointmentModel) c.get(0);
                     pvt.setAppointment(appo.getName());
                 }
@@ -229,7 +229,7 @@ public class PVTServiceBean implements PVTServiceBeanLocal {
             date += PERCENT;
         }
 
-        // PatientVisitModel‚ğ{İID‚ÅŒŸõ‚·‚é
+        // PatientVisitModelã‚’æ–½è¨­IDã§æ¤œç´¢ã™ã‚‹
         List<PatientVisitModel> result =
                 (List<PatientVisitModel>) em.createQuery(QUERY_PVT_BY_FID_DID_DATE)
                               .setParameter(FID, fid)
@@ -250,24 +250,24 @@ public class PVTServiceBean implements PVTServiceBeanLocal {
 
         boolean searchAppo = (appoDateFrom != null && appoDateTo != null) ? true : false;
 
-        // —ˆ‰@î•ñ‚ÆŠ³Ò‚Í ManyToOne ‚ÌŠÖŒW‚Å‚ ‚é
+        // æ¥é™¢æƒ…å ±ã¨æ‚£è€…ã¯ ManyToOne ã®é–¢ä¿‚ã§ã‚ã‚‹
         for (int i = 0; i < len; i++) {
             //for (int i = firstResult; i < len; i++) {
 
             PatientVisitModel pvt = result.get(i);
             PatientModel patient = pvt.getPatientModel();
 
-            // Š³Ò‚ÌŒ’N•ÛŒ¯‚ğæ“¾‚·‚é
+            // æ‚£è€…ã®å¥åº·ä¿é™ºã‚’å–å¾—ã™ã‚‹
             List<HealthInsuranceModel> insurances = (List<HealthInsuranceModel>)em.createQuery(QUERY_INSURANCE_BY_PATIENT_ID)
             .setParameter(ID, patient.getId()).getResultList();
             patient.setHealthInsurances(insurances);
 
-            // —\–ñ‚ğŒŸõ‚·‚é
+            // äºˆç´„ã‚’æ¤œç´¢ã™ã‚‹
             if (searchAppo) {
                 KarteBean karte = (KarteBean)em.createQuery(QUERY_KARTE_BY_PATIENT_ID)
                 .setParameter(ID, patient.getId())
                 .getSingleResult();
-                // ƒJƒ‹ƒe‚Ì PK ‚ğ“¾‚é
+                // ã‚«ãƒ«ãƒ†ã® PK ã‚’å¾—ã‚‹
                 long karteId = karte.getId();
 
                 List c = em.createQuery(QUERY_APPO_BY_KARTE_ID_DATE)
@@ -276,7 +276,7 @@ public class PVTServiceBean implements PVTServiceBeanLocal {
                 .getResultList();
                 //System.err.println("appo size = " + c.size());
                 if (c != null && c.size() > 0) {
-                    // “–“ú‚Ì—\–ñ‚ÅÅ‰‚Ì‚à‚Ì
+                    // å½“æ—¥ã®äºˆç´„ã§æœ€åˆã®ã‚‚ã®
                     AppointmentModel appo = (AppointmentModel) c.get(0);
                     pvt.setAppointment(appo.getName());
                 }
@@ -287,9 +287,9 @@ public class PVTServiceBean implements PVTServiceBeanLocal {
     }
 
     /**
-     * ó•tî•ñ‚ğíœ‚·‚éB
-     * @param id ó•tƒŒƒR[ƒh
-     * @return íœŒ”
+     * å—ä»˜æƒ…å ±ã‚’å‰Šé™¤ã™ã‚‹ã€‚
+     * @param id å—ä»˜ãƒ¬ã‚³ãƒ¼ãƒ‰
+     * @return å‰Šé™¤ä»¶æ•°
      */
     @Override
     public int removePvt(long id) {
@@ -299,9 +299,9 @@ public class PVTServiceBean implements PVTServiceBeanLocal {
     }
 
     /**
-     * f@I—¹î•ñ‚ğ‘‚«‚ŞB
-     * @param pk ƒŒƒR[ƒhID
-     * @param state f@I—¹‚Ì 1
+     * è¨ºå¯Ÿçµ‚äº†æƒ…å ±ã‚’æ›¸ãè¾¼ã‚€ã€‚
+     * @param pk ãƒ¬ã‚³ãƒ¼ãƒ‰ID
+     * @param state è¨ºå¯Ÿçµ‚äº†ã®æ™‚ 1
      */
     @Override
     public int updatePvtState(long pk, int state) {
@@ -318,8 +318,8 @@ public class PVTServiceBean implements PVTServiceBeanLocal {
         
         PatientVisitModel exist = list.get(0);
 
-        // •Û‘¶iCLAIM‘—Mj==2 (bit=1)
-        // C³‘—M == 4 (bit=2)
+        // ä¿å­˜ï¼ˆCLAIMé€ä¿¡ï¼‰==2 (bit=1)
+        // ä¿®æ­£é€ä¿¡ == 4 (bit=2)
         if (state == 2 || state == 4) {
             exist.setState(state);
             em.flush();
@@ -331,7 +331,7 @@ public class PVTServiceBean implements PVTServiceBeanLocal {
         boolean yellow = ((curState & (1<<BIT_MODIFY_CLAIM))!=0);
         boolean cancel = ((curState & (1<<BIT_CANCEL))!=0);
 
-        // •Û‘¶ | C³ | ƒLƒƒƒ“ƒZƒ‹ --> •ÏX•s‰Â
+        // ä¿å­˜ | ä¿®æ­£ | ã‚­ãƒ£ãƒ³ã‚»ãƒ« --> å¤‰æ›´ä¸å¯
         if (red || yellow || cancel) {
             return 0;
         }
@@ -342,9 +342,9 @@ public class PVTServiceBean implements PVTServiceBeanLocal {
     }
 
     /**
-     * ƒƒ‚‚ğXV‚·‚éB
-     * @param pk ƒŒƒR[ƒhID
-     * @param memo ƒƒ‚
+     * ãƒ¡ãƒ¢ã‚’æ›´æ–°ã™ã‚‹ã€‚
+     * @param pk ãƒ¬ã‚³ãƒ¼ãƒ‰ID
+     * @param memo ãƒ¡ãƒ¢
      * @return 1
      */
     @Override

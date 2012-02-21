@@ -123,7 +123,7 @@ public final class PlistParser {
                         }
                     }
 
-                    // WÏ‚µ‚½ charactor ‚©‚ç•¶š—ñ‚ğæ“¾
+                    // é›†ç©ã—ãŸ charactor ã‹ã‚‰æ–‡å­—åˆ—ã‚’å–å¾—
                     String value = builderToString();
 
                     switch (currentParsing) {
@@ -201,12 +201,12 @@ public final class PlistParser {
                 public void characters(char ch[], int start, int length)
                         throws SAXException {
 
-                    // ƒSƒ~‚ğœ‹‚·‚é
+                    // ã‚´ãƒŸã‚’é™¤å»ã™ã‚‹
                     String parsedCharacterData = currentParsing == TT_DATA
                                                ? new String(ch, start, length).trim()
                                                : new String(ch, start, length);
 
-                    // WÏ‚·‚é
+                    // é›†ç©ã™ã‚‹
                     if (characterBuffer == null) {
                         characterBuffer = new StringBuilder();
                         characterBuffer.append(parsedCharacterData);

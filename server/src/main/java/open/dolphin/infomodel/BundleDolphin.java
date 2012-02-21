@@ -69,12 +69,12 @@ public class BundleDolphin extends ClaimBundle {
             item = items[i];
             
             // item name
-            buf.append("E").append(item.getName());
+            buf.append("ãƒ»").append(item.getName());
             
             // item number
             number = item.getNumber();
             if (number != null) {
-                buf.append("@").append(number);
+                buf.append("ã€€").append(number);
                 if (item.getUnit() != null) {
                     buf.append(item.getUnit());
                 }
@@ -84,7 +84,7 @@ public class BundleDolphin extends ClaimBundle {
         
         // bundleNumber
         if (! bundleNumber.equals("1")) {
-            buf.append("X@").append(bundleNumber).append("\n");
+            buf.append("Xã€€").append(bundleNumber).append("\n");
         }
         
         // admMemo

@@ -21,13 +21,13 @@ package open.dolphin.infomodel;
 
 
 /**
- * ClaimItem —v‘fƒNƒ‰ƒXB
+ * ClaimItem è¦ç´ ã‚¯ãƒ©ã‚¹ã€‚
  *
  * @author Kazushi Minagawa, Digital Globe,Inc. 
  */
 public class ClaimItem extends InfoModel {
 
-    private static final String DISPOSE_UNIT = "ŠÇ";
+    private static final String DISPOSE_UNIT = "ç®¡";
 	
     private String name;
     private String code;
@@ -40,7 +40,7 @@ public class ClaimItem extends InfoModel {
     private String numberCodeSystem;
     private String memo;
     
-    // –òÜ‹æ•ª 2011-02-10 ’Ç‰Á
+    // è–¬å‰¤åŒºåˆ† 2011-02-10 è¿½åŠ 
     private String ykzKbn;
 
     
@@ -154,7 +154,7 @@ public class ClaimItem extends InfoModel {
     }
 
     //---------------------------------
-    // c—Ê”pŠü
+    // æ®‹é‡å»ƒæ£„
     //---------------------------------
     public boolean getCanDispose() {
 

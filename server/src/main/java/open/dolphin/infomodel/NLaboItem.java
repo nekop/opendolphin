@@ -15,80 +15,80 @@ public class NLaboItem extends InfoModel implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    // Š³ÒID fid:Pid
+    // æ‚£è€…ID fid:Pid
     @Column (nullable = false)
     private String patientId;
 
-    // ŒŸ‘ÌÌæ“ú
+    // æ¤œä½“æ¡å–æ—¥
     @Column (nullable = false)
     private String sampleDate;
 
-    // Labo ƒR[ƒh
+    // Labo ã‚³ãƒ¼ãƒ‰
     private String laboCode;
 
-    // “ûƒr
+    // ä¹³ãƒ“
     private String lipemia;
 
-    // —nŒŒ
+    // æº¶è¡€
     private String hemolysis;
 
-    // “§Í‘OŒã
+    // é€æå‰å¾Œ
     private String dialysis;
 
-    // ƒXƒe[ƒ^ƒX
+    // ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹
     private String reportStatus;
 
-    // ƒOƒ‹[ƒvƒR[ƒh
+    // ã‚°ãƒ«ãƒ¼ãƒ—ã‚³ãƒ¼ãƒ‰
     @Column (nullable = false)
     private String groupCode;
 
-    // ƒOƒ‹[ƒv–¼Ì
+    // ã‚°ãƒ«ãƒ¼ãƒ—åç§°
     private String groupName;
 
-    // ŒŸ¸€–ÚƒR[ƒhEe
+    // æ¤œæŸ»é …ç›®ã‚³ãƒ¼ãƒ‰ãƒ»è¦ª
     @Column (nullable = false)
     private String parentCode;
 
-    // ŒŸ¸€–ÚƒR[ƒh
+    // æ¤œæŸ»é …ç›®ã‚³ãƒ¼ãƒ‰
     @Column (nullable = false)
     private String itemCode;
 
-    // MEDIS ƒR[ƒh
+    // MEDIS ã‚³ãƒ¼ãƒ‰
     private String medisCode;
 
-    // ŒŸ¸€–Ú–¼
+    // æ¤œæŸ»é …ç›®å
     @Column (nullable = false)
     private String itemName;
 
-    // ˆÙí‹æ•ª
+    // ç•°å¸¸åŒºåˆ†
     private String abnormalFlg;
 
-    // Šî€’l
+    // åŸºæº–å€¤
     private String normalValue;
 
-    // ŒŸ¸Œ‹‰Ê
+    // æ¤œæŸ»çµæœ
     @Column(name = "c_value")
     private String value;
 
-    // ’PˆÊ
+    // å˜ä½
     private String unit;
 
-    // ŒŸ¸Ş—¿ƒR[ƒh
+    // æ¤œæŸ»ææ–™ã‚³ãƒ¼ãƒ‰
     private String specimenCode;
 
-    // ŒŸ¸Ş—¿–¼
+    // æ¤œæŸ»ææ–™å
     private String specimenName;
 
-    // ƒRƒƒ“ƒgƒR[ƒh1
+    // ã‚³ãƒ¡ãƒ³ãƒˆã‚³ãƒ¼ãƒ‰1
     private String commentCode1;
 
-    // ƒRƒƒ“ƒg1
+    // ã‚³ãƒ¡ãƒ³ãƒˆ1
     private String comment1;
 
-    // ƒRƒƒ“ƒgƒR[ƒh2
+    // ã‚³ãƒ¡ãƒ³ãƒˆã‚³ãƒ¼ãƒ‰2
     private String commentCode2;
 
-    // ƒRƒƒ“ƒg2
+    // ã‚³ãƒ¡ãƒ³ãƒˆ2
     private String comment2;
 
     // Sort Key

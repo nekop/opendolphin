@@ -12,7 +12,7 @@ package open.dolphin.infomodel;
 import java.util.Vector;
 
 /**
- * Simple ClaimÅ@Class used for PVT.
+ * Simple Claim„ÄÄClass used for PVT.
  *
  * @author  Kazushi Minagawa, Digital Globe, Inc.
  *

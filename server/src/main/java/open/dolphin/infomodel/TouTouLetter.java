@@ -3,7 +3,7 @@ package open.dolphin.infomodel;
 import javax.persistence.*;
 
 /**
- * ‚ª‚ñ‘Š’ku“ “ v‚ÌĞ‰îóƒtƒH[ƒ€B
+ * ãŒã‚“ç›¸è«‡ã€Œè•©è•©ã€ã®ç´¹ä»‹çŠ¶ãƒ•ã‚©ãƒ¼ãƒ ã€‚
  */
 @Entity
 @Inheritance(strategy=InheritanceType.SINGLE_TABLE)

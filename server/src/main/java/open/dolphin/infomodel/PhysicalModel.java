@@ -29,23 +29,23 @@ public class PhysicalModel extends InfoModel implements Comparable {
     private long heightId;
     private long weightId;
     
-    // 身長
+    // 霄ｫ髟ｷ
     private String height;
     
-    // 体重
+    // 菴馴㍾
     private String weight;
     
     // BMI
     private int bmi;
     
-    // 同定日
+    // 蜷悟ｮ壽律
     private String identifiedDate;
     
-    // メモ
+    // 繝｡繝｢
     private String memo;
     
     /**
-     * デフォルトコンストラクタ
+     * 繝�繝輔か繝ｫ繝医さ繝ｳ繧ｹ繝医Λ繧ｯ繧ｿ
      */
     public PhysicalModel() {
     }

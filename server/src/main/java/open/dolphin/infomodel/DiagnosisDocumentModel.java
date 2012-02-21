@@ -20,7 +20,7 @@ package open.dolphin.infomodel;
 
 
 /**
- * Diagnosisドキュメントのモデル
+ * Diagnosis繝峨く繝･繝｡繝ｳ繝医�ｮ繝｢繝�繝ｫ
  *
  * @author Kazushi Minagawa
  */

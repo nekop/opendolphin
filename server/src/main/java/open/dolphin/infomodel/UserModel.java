@@ -60,7 +60,7 @@ public class UserModel extends InfoModel implements java.io.Serializable {
     private String orcaId;
 
     /**
-     * UserModelƒIƒuƒWƒFƒNƒg‚ğ¶¬‚·‚éB
+     * UserModelã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’ç”Ÿæˆã™ã‚‹ã€‚
      */
     public UserModel(){
     }
@@ -82,8 +82,8 @@ public class UserModel extends InfoModel implements java.io.Serializable {
     }
     
     /**
-     * {İID‚ğœ‚¢‚½ID‚ğ•Ô‚·B
-     * @return {İID‚ğœ‚¢‚½ID
+     * æ–½è¨­IDã‚’é™¤ã„ãŸIDã‚’è¿”ã™ã€‚
+     * @return æ–½è¨­IDã‚’é™¤ã„ãŸID
      */
     public String idAsLocal() {
         int index = userId.indexOf(COMPOSITE_KEY_MAKER);
@@ -155,8 +155,8 @@ public class UserModel extends InfoModel implements java.io.Serializable {
     }
     
     /**
-     * ƒ†[ƒUƒ[ƒ‹‚ğ’Ç‰Á‚·‚éB
-     * @param value ƒ†[ƒUƒ[ƒ‹
+     * ãƒ¦ãƒ¼ã‚¶ãƒ­ãƒ¼ãƒ«ã‚’è¿½åŠ ã™ã‚‹ã€‚
+     * @param value ãƒ¦ãƒ¼ã‚¶ãƒ­ãƒ¼ãƒ«
      */
     public void addRole(RoleModel value) {
         
@@ -167,8 +167,8 @@ public class UserModel extends InfoModel implements java.io.Serializable {
     }
     
     /**
-     * ŠÈˆÕƒ†[ƒUî•ñ‚ğ•Ô‚·B
-     * @return ŠÈˆÕƒ†[ƒUî•ñ
+     * ç°¡æ˜“ãƒ¦ãƒ¼ã‚¶æƒ…å ±ã‚’è¿”ã™ã€‚
+     * @return ç°¡æ˜“ãƒ¦ãƒ¼ã‚¶æƒ…å ±
      */
     public UserLiteModel getLiteModel() {
         

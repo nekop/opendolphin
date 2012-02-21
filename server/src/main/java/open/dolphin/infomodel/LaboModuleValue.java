@@ -12,7 +12,7 @@ import javax.persistence.*;
 @Table(name = "d_labo_module")
 public class LaboModuleValue extends KarteEntryBean implements java.io.Serializable {
     
-    // MML‚ÌUID
+    // MMLã®UID
     @Column(nullable=false, unique=true, length=32)
     private String docId;
     
@@ -250,8 +250,8 @@ public class LaboModuleValue extends KarteEntryBean implements java.io.Serializa
     }
     
     /**
-     * ƒTƒ“ƒvƒ‹ƒ^ƒCƒ€‚Å”äŠr‚·‚éB
-     * @return ”äŠr’l
+     * ã‚µãƒ³ãƒ—ãƒ«ã‚¿ã‚¤ãƒ ã§æ¯”è¼ƒã™ã‚‹ã€‚
+     * @return æ¯”è¼ƒå€¤
      */
     public int compareTo(Object other) {
         if (other != null && getClass() == other.getClass()) {
