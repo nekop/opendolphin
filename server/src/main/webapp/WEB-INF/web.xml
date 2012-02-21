@@ -15,15 +15,8 @@
     <servlet-name>ServletAdaptor</servlet-name>
   </filter-mapping>
 
-  <listener>
-    <listener-class>org.jboss.resteasy.plugins.server.servlet.ResteasyBootstrap</listener-class>
-  </listener>
-  <servlet>
-    <servlet-name>Resteasy</servlet-name>
-    <servlet-class> org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher</servlet-class>
-  </servlet>
   <servlet-mapping>
-    <servlet-name>Resteasy</servlet-name>
+    <servlet-name>javax.ws.rs.core.Application</servlet-name>
     <url-pattern>/openSource/*</url-pattern>
   </servlet-mapping>
 
