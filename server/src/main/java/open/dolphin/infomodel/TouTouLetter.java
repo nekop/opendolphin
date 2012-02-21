@@ -7,10 +7,6 @@ import javax.persistence.*;
  */
 @Entity
 @Inheritance(strategy=InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(
-    name="docType",
-    discriminatorType=DiscriminatorType.STRING
-)
 @DiscriminatorValue("TOUTOU")
 public class TouTouLetter extends LetterModel {
     

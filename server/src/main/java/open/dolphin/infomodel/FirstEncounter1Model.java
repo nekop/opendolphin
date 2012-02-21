@@ -7,10 +7,6 @@ import javax.persistence.*;
  */
 @Entity
 @Inheritance(strategy=InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(
-    name="docType",
-    discriminatorType=DiscriminatorType.STRING
-)
 @DiscriminatorValue("SETA_1")
 public class FirstEncounter1Model extends FirstEncounterModel implements java.io.Serializable {
     
