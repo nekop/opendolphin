@@ -4,10 +4,19 @@ OpenDolphin on JBoss AS 7.1.0 experimental migration project.
 - JBoss AS 7.1.0.Final
 - Java EE 6
 
-We can now build the "server" tree and deploy:
+
+How to build:
 
 $ mvn clean package
+
+Server:
+
 $ cp server/target/*.war $JBOSS_HOME/standalone/deployments/
+
+Client:
+
+$ java -jar client/target/OpenDolphin.jar
+
 
 TODOs:
 
