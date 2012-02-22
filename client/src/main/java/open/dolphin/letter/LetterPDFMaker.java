@@ -1,8 +1,10 @@
 package open.dolphin.letter;
 
-import com.lowagie.text.*;
-import com.lowagie.text.pdf.BaseFont;
-import com.lowagie.text.pdf.PdfWriter;
+import com.itextpdf.text.*;
+import com.itextpdf.text.pdf.BaseFont;
+import com.itextpdf.text.pdf.PdfPTable;
+import com.itextpdf.text.pdf.PdfPCell;
+import com.itextpdf.text.pdf.PdfWriter;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Date;
@@ -127,11 +129,9 @@ public class LetterPDFMaker extends AbstractLetterPDFMaker {
             }
 
             // 患者
-            Table pTable = new Table(4);
-            pTable.setPadding(2);
+            PdfPTable pTable = new PdfPTable(4);
             int width[] = new int[]{20, 60, 10, 10};
             pTable.setWidths(width);
-            pTable.setWidth(100);
 
             String birthday = getDateString(model.getPatientBirthday());
             String sexStr = getSexString(model.getPatientGender());
@@ -145,7 +145,8 @@ public class LetterPDFMaker extends AbstractLetterPDFMaker {
             sb.append(" (");
             sb.append(model.getPatientAge());
             sb.append(" 歳)");
-            Cell cell = new Cell(new Phrase(sb.toString(), bodyFont));
+            PdfPCell cell = new PdfPCell(new Phrase(sb.toString(), bodyFont));
+            cell.setPadding(2);
             cell.setColspan(3);
             pTable.addCell(cell);
             document.add(pTable);
@@ -158,11 +159,9 @@ public class LetterPDFMaker extends AbstractLetterPDFMaker {
             String medication = model.getTextValue(LetterImpl.TEXT_MEDICATION);
             String remarks = model.getItemValue(LetterImpl.ITEM_REMARKS);
 
-            Table lTable = new Table(2); //テーブル・オブジェクトの生成
-            lTable.setPadding(2);
+            PdfPTable lTable = new PdfPTable(2); //テーブル・オブジェクトの生成
             width = new int[]{20, 80};
             lTable.setWidths(width); //各カラムの大きさを設定（パーセント）
-            lTable.setWidth(100);
 
             lTable.addCell(new Phrase("傷病名", bodyFont));
             lTable.addCell(new Phrase(disease, bodyFont));
@@ -173,7 +172,8 @@ public class LetterPDFMaker extends AbstractLetterPDFMaker {
             sb = new StringBuilder();
             sb.append("既往歴").append("\n").append("家族歴");
             lTable.addCell(new Phrase(sb.toString(), bodyFont));
-            cell = new Cell(new Phrase(pastFamily, bodyFont));
+            cell = new PdfPCell(new Phrase(pastFamily, bodyFont));
+            cell.setPadding(2);
             lTable.addCell(cell);
 
             sb = new StringBuilder();

@@ -1,9 +1,9 @@
 package open.dolphin.letter;
 
-import com.lowagie.text.Font;
-import com.lowagie.text.Phrase;
-import com.lowagie.text.pdf.BaseFont;
-import com.lowagie.text.pdf.PdfPCell;
+import com.itextpdf.text.Font;
+import com.itextpdf.text.Phrase;
+import com.itextpdf.text.pdf.BaseFont;
+import com.itextpdf.text.pdf.PdfPCell;
 import java.util.Date;
 import open.dolphin.infomodel.LetterModule;
 import open.dolphin.infomodel.ModelUtils;
