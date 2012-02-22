@@ -1,33 +1,40 @@
-OpenDolphin on JBoss AS 7.1.0 experimental migration project.
+OpenDolphin on JBoss AS 7.1.0 / Java EE 6 experimental migration project
+====================
 
-- Maven 3.0.3
-- JBoss AS 7.1.0.Final
-- Java EE 6
-
-
-How to build:
-
-$ mvn clean package
-
-Server:
-
-$ cp server/target/*.war $JBOSS_HOME/standalone/deployments/
-
-Client:
-
-$ java -jar client/target/OpenDolphin.jar
+* Maven 3.0.3
+* JBoss AS 7.1.0.Final
+* Java EE 6
 
 
-TODOs:
+How to build
+--------------------
+Before build, change data source name in common/src/main/resources/META-INF/persistence.xml
 
-- Add jboss-as-maven-plugin support
-- Functional test
-- Consider renaming to avoid confusion
-- Confirm someone if this commit is ok: Updated itext libs. commit 18462c00910cf52ce889596b0b6c57c89ed49780
-
+> mvn clean package
 
 
---
+How to deploy/run
+--------------------
+Server
+
+> cp server/target/*.war $JBOSS_HOME/standalone/deployments/
+
+Client
+
+> java -jar client/target/OpenDolphin.jar
+
+
+TODOs
+--------------------
+
+* Add jboss-as-maven-plugin support
+* Functional test
+* Consider renaming to avoid confusion
+* Confirm someone if this commit is ok: Update itext libs. commit 18462c00910cf52ce889596b0b6c57c89ed49780
+
+
+Original README
+--------------------
 2012-01-22 （株）デジタルグローブ　皆川和史
 
 1．ライセンス
