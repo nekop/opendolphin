@@ -6,15 +6,15 @@ OpenDolphin on JBoss AS 7.1.0 experimental migration project.
 
 We can now build the "server" tree and deploy:
 
-$ cd server
-$ mvn package
-$ cp target/opendolphin-server-2.3.0-SNAPSHOT.war $JBOSS_HOME/standalone/deployments/
+$ mvn clean package
+$ cp server/target/*.war $JBOSS_HOME/standalone/deployments/
 
 TODOs:
 
 - Add jboss-as-maven-plugin support
 - Create and clean up "client" tree
 - Functional test
+- Consider renaming to avoid confusion
 
 
 
