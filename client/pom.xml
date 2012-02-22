@@ -16,6 +16,11 @@
 
   <dependencies>
     <dependency>
+      <groupId>opendolphin</groupId>
+      <artifactId>opendolphin-common</artifactId>
+    </dependency>
+
+    <dependency>
       <groupId>javax.persistence</groupId>
       <artifactId>persistence-api</artifactId>
       <version>1.0</version>
@@ -69,11 +74,6 @@
       <groupId>jfree</groupId>
       <artifactId>jcommon</artifactId>
       <version>1.0.15</version>
-    </dependency>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>opendolphin-ea-dist-ejb</artifactId>
-      <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>org.swinglabs</groupId>
