@@ -15,6 +15,7 @@ TODOs:
 - Create and clean up "client" tree
 - Functional test
 - Consider renaming to avoid confusion
+- Confirm someone if this commit is ok: Updated itext libs. commit 18462c00910cf52ce889596b0b6c57c89ed49780
 
 
 
