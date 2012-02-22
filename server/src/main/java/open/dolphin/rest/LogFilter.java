@@ -6,7 +6,7 @@ import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import open.dolphin.session.UserServiceBeanLocal;
-import org.apache.log4j.Logger;
+import java.util.logging.Logger;
 
 /**
  *
@@ -14,7 +14,7 @@ import org.apache.log4j.Logger;
  */
 public final class LogFilter implements Filter {
 
-    private static Logger logger = Logger.getLogger("open.dolphin");
+    Logger logger = Logger.getLogger(getClass().getName());
 
     private static final String USER_NAME = "userName";
     private static final String PASSWORD = "password";
@@ -50,7 +50,7 @@ public final class LogFilter implements Filter {
             sbd.append(UNAUTHORIZED_USER);
             sbd.append(userName).append(": ").append(req.getRequestURI());
             String msg = sbd.toString();
-            logger.warn(msg);
+            logger.warning(msg);
             res.sendError(401);
             return;
         }
@@ -63,7 +63,7 @@ public final class LogFilter implements Filter {
         sb.append(wrapper.getShortUser()).append(" ");
         sb.append(wrapper.getMethod()).append(" ");
         sb.append(wrapper.getRequestURI());
-        logger.info(sb.toString());
+        logger.fine(sb.toString());
 
         chain.doFilter(wrapper, response);
     }

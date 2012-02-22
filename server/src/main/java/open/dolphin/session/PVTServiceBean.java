@@ -9,7 +9,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 import open.dolphin.infomodel.*;
-import org.apache.log4j.Logger;
+import java.util.logging.Logger;
 
 /**
  *
@@ -69,7 +69,7 @@ public class PVTServiceBean implements PVTServiceBeanLocal {
             }
 
         } catch (Exception te) {
-            Logger.getLogger("org.jboss.logging.util.OnlyOnceErrorHandler").warn(te.getMessage());
+            Logger.getLogger(getClass().getName()).warning(te.getMessage());
             return 0;
         }
 

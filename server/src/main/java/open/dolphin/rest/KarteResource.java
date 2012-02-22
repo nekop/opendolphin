@@ -10,7 +10,6 @@ import javax.ws.rs.core.MediaType;
 import open.dolphin.converter.PlistConverter;
 import open.dolphin.converter.PlistParser;
 import open.dolphin.infomodel.*;
-import org.apache.log4j.Logger;
 
 /**
  * REST Web Service
@@ -179,10 +178,10 @@ public final class KarteResource extends AbstractResource {
                     sb.append(pvtPK);
                     sb.append(",");
                     sb.append(state);
-                    Logger.getLogger("open.dolphin").warn(sb.toString());
+                    logger.warning(sb.toString());
                 }
             } catch (Throwable t) {
-                Logger.getLogger("open.dolphin").warn(t.getMessage());
+                logger.warning(t.getMessage());
             }
         }
 
