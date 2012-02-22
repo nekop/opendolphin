@@ -61,11 +61,6 @@
       <version>2.4.0</version>
     </dependency>
     <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-nop</artifactId>
-      <version>1.6.2</version>
-    </dependency>
-    <dependency>
       <groupId>jfree</groupId>
       <artifactId>jfreechart</artifactId>
       <version>1.0.13</version>
