@@ -1,0 +1,563 @@
+create table d_appo (
+	id bigint not null,
+	confirmed timestamp not null,
+	ended timestamp,
+	linkId bigint not null,
+	linkRelation varchar(255),
+	recorded timestamp not null,
+	started timestamp not null,
+	status varchar(1) not null,
+	c_date date not null,
+	memo varchar(255),
+	c_name varchar(255) not null,
+	patientId varchar(255),
+	creator_id bigint not null,
+	karte_id bigint not null,
+	primary key (id))
+create table d_byte_module (
+	id bigint not null,
+	beanBytes blob,
+	primary key (id))
+create table d_composite_image (
+	id bigint not null,
+	confirmed timestamp not null,
+	ended timestamp,
+	linkId bigint not null,
+	linkRelation varchar(255),
+	recorded timestamp not null,
+	started timestamp not null,
+	status varchar(1) not null,
+	compositor bigint not null,
+	contentType varchar(255) not null,
+	href varchar(255) not null,
+	jpegByte blob not null,
+	medicalRole varchar(255) not null,
+	title varchar(255) not null,
+	creator_id bigint not null,
+	karte_id bigint not null,
+	primary key (id))
+create table d_diagnosis (
+	id bigint not null,
+	confirmed timestamp not null,
+	ended timestamp,
+	linkId bigint not null,
+	linkRelation varchar(255),
+	recorded timestamp not null,
+	started timestamp not null,
+	status varchar(1) not null,
+	diagnosis varchar(255) not null,
+	diagnosisCategory varchar(255),
+	diagnosisCategoryCodeSys varchar(255),
+	diagnosisCategoryDesc varchar(255),
+	diagnosisCode varchar(255),
+	diagnosisCodeSystem varchar(255),
+	outcome varchar(255),
+	outcomeCodeSys varchar(255),
+	outcomeDesc varchar(255),
+	firstEncounterDate varchar(255),
+	relatedHealthInsurance varchar(255),
+	creator_id bigint not null,
+	karte_id bigint not null,
+	primary key (id))
+create table d_document (
+	id bigint not null,
+	confirmed timestamp not null,
+	ended timestamp,
+	linkId bigint not null,
+	linkRelation varchar(255),
+	recorded timestamp not null,
+	started timestamp not null,
+	status varchar(1) not null,
+	department varchar(255),
+	departmentDesc varchar(255),
+	docId varchar(32) not null,
+	docType varchar(255) not null,
+	hasImage boolean not null,
+	hasLaboTest boolean not null,
+	hasMark boolean not null,
+	hasRp boolean not null,
+	hasTreatment boolean not null,
+	healthInsurance varchar(255),
+	healthInsuranceDesc varchar(255),
+	healthInsuranceGUID varchar(255),
+	labtestOrderNumber varchar(255),
+	parentId varchar(255),
+	parentIdRelation varchar(255),
+	purpose varchar(255) not null,
+	title varchar(255) not null,
+	versionNumber varchar(255),
+	creator_id bigint not null,
+	karte_id bigint not null,
+	primary key (id))
+create table d_facility (
+	id bigint not null,
+	address varchar(255) not null,
+	facilityId varchar(255) not null unique,
+	facilityName varchar(255) not null,
+	facsimile varchar(255),
+	memberType varchar(255) not null,
+	registeredDate date not null,
+	s3AccessKey varchar(255),
+	s3SecretKey varchar(255),
+	s3URL varchar(255),
+	telephone varchar(255) not null,
+	url varchar(255),
+	zipCode varchar(255) not null,
+	primary key (id))
+create table d_first_encounter (docType varchar(31) not null,
+	id bigint not null,
+	confirmed timestamp not null,
+	ended timestamp,
+	linkId bigint not null,
+	linkRelation varchar(255),
+	recorded timestamp not null,
+	started timestamp not null,
+	status varchar(1) not null,
+	beanBytes binary(255) not null,
+	creator_id bigint not null,
+	karte_id bigint not null,
+	primary key (id))
+create table d_health_insurance (
+	id bigint not null,
+	beanBytes blob not null,
+	patient_id bigint not null,
+	primary key (id))
+create table d_image (
+	id bigint not null,
+	confirmed timestamp not null,
+	ended timestamp,
+	linkId bigint not null,
+	linkRelation varchar(255),
+	recorded timestamp not null,
+	started timestamp not null,
+	status varchar(1) not null,
+	bucket varchar(255),
+	contentType varchar(255) not null,
+	href varchar(255) not null,
+	medicalRole varchar(255) not null,
+	sop varchar(255),
+	title varchar(255) not null,
+	url varchar(255),
+	jpegByte blob not null,
+	creator_id bigint not null,
+	karte_id bigint not null,
+	doc_id bigint not null,
+	primary key (id))
+create table d_karte (
+	id bigint not null,
+	created date not null,
+	patient_id bigint not null,
+	primary key (id))
+create table d_labo_item (
+	id bigint not null,
+	acode varchar(255),
+	icode varchar(255),
+	itemCode varchar(255),
+	itemCodeId varchar(255),
+	itemName varchar(255),
+	itemValue varchar(255),
+	low varchar(255),
+	mcode varchar(255),
+	normal varchar(255),
+	nout varchar(255),
+	rcode varchar(255),
+	scode varchar(255),
+	unit varchar(255),
+	unitCode varchar(255),
+	unitCodeId varchar(255),
+	up varchar(255),
+	specimen_id bigint not null,
+	primary key (id))
+create table d_labo_module (
+	id bigint not null,
+	confirmed timestamp not null,
+	ended timestamp,
+	linkId bigint not null,
+	linkRelation varchar(255),
+	recorded timestamp not null,
+	started timestamp not null,
+	status varchar(1) not null,
+	clientFacility varchar(255),
+	clientFacilityCode varchar(255),
+	clientFacilityCodeId varchar(255),
+	docId varchar(32) not null unique,
+	laboratoryCenter varchar(255),
+	laboratoryCenterCode varchar(255),
+	laboratoryCenterCodeId varchar(255),
+	registId varchar(255),
+	registTime varchar(255),
+	reportStatus varchar(255),
+	reportStatusCode varchar(255),
+	reportStatusCodeId varchar(255),
+	reportTime varchar(255),
+	sampleTime varchar(255),
+	setCode varchar(255),
+	setCodeId varchar(255),
+	setName varchar(255),
+	creator_id bigint not null,
+	karte_id bigint not null,
+	primary key (id))
+create table d_labo_specimen (
+	id bigint not null,
+	specimenCode varchar(255),
+	specimenCodeId varchar(255),
+	specimenName varchar(255),
+	module_id bigint not null,
+	primary key (id))
+create table d_letter (docType varchar(31) not null,
+	id bigint not null,
+	confirmed timestamp not null,
+	ended timestamp,
+	linkId bigint not null,
+	linkRelation varchar(255),
+	recorded timestamp not null,
+	started timestamp not null,
+	status varchar(1) not null,
+	beanBytes binary(255) not null,
+	clientDept varchar(255),
+	clientDoctor varchar(255),
+	clientHospital varchar(255),
+	consultantDept varchar(255),
+	consultantDoctor varchar(255),
+	consultantHospital varchar(255),
+	patientBirthday varchar(255),
+	patientGender varchar(255),
+	patientName varchar(255),
+	visited varchar(255),
+	disease varchar(255),
+	purpose varchar(255),
+	creator_id bigint not null,
+	karte_id bigint not null,
+	primary key (id))
+create table d_letter_date (
+	id bigint not null,
+	name varchar(255) not null,
+	c_value date,
+	module_id bigint not null,
+	primary key (id))
+create table d_letter_item (
+	id bigint not null,
+	name varchar(255) not null,
+	c_value varchar(255),
+	module_id bigint not null,
+	primary key (id))
+create table d_letter_module (
+	id bigint not null,
+	confirmed timestamp not null,
+	ended timestamp,
+	linkId bigint not null,
+	linkRelation varchar(255),
+	recorded timestamp not null,
+	started timestamp not null,
+	status varchar(1) not null,
+	clientAddress varchar(255),
+	clientDept varchar(255),
+	clientDoctor varchar(255),
+	clientFax varchar(255),
+	clientHospital varchar(255),
+	clientTelephone varchar(255),
+	clientZipCode varchar(255),
+	consultantAddress varchar(255),
+	consultantDept varchar(255),
+	consultantDoctor varchar(255),
+	consultantFax varchar(255),
+	consultantHospital varchar(255),
+	consultantTelephone varchar(255),
+	consultantZipCode varchar(255),
+	handleClass varchar(255),
+	letterType varchar(255),
+	patientAddress varchar(255),
+	patientAge varchar(255),
+	patientBirthday varchar(255),
+	patientFaxNumber varchar(255),
+	patientGender varchar(255),
+	patientId varchar(255),
+	patientKana varchar(255),
+	patientMobilePhone varchar(255),
+	patientName varchar(255),
+	patientOccupation varchar(255),
+	patientTelephone varchar(255),
+	patientZipCode varchar(255),
+	title varchar(255),
+	creator_id bigint not null,
+	karte_id bigint not null,
+	primary key (id))
+create table d_letter_text (
+	id bigint not null,
+	name varchar(255) not null,
+	textValue clob,
+	module_id bigint not null,
+	primary key (id))
+create table d_module (
+	id bigint not null,
+	confirmed timestamp not null,
+	ended timestamp,
+	linkId bigint not null,
+	linkRelation varchar(255),
+	recorded timestamp not null,
+	started timestamp not null,
+	status varchar(1) not null,
+	beanBytes blob not null,
+	entity varchar(255) not null,
+	name varchar(255) not null,
+	role varchar(255) not null,
+	stampNumber integer not null,
+	creator_id bigint not null,
+	karte_id bigint not null,
+	doc_id bigint not null,
+	primary key (id))
+create table d_nlabo_item (
+	id bigint not null,
+	abnormalFlg varchar(255),
+	comment1 varchar(255),
+	comment2 varchar(255),
+	commentCode1 varchar(255),
+	commentCode2 varchar(255),
+	dialysis varchar(255),
+	groupCode varchar(255) not null,
+	groupName varchar(255),
+	hemolysis varchar(255),
+	itemCode varchar(255) not null,
+	itemName varchar(255) not null,
+	laboCode varchar(255),
+	lipemia varchar(255),
+	medisCode varchar(255),
+	normalValue varchar(255),
+	parentCode varchar(255) not null,
+	patientId varchar(255) not null,
+	reportStatus varchar(255),
+	sampleDate varchar(255) not null,
+	sortKey varchar(255),
+	specimenCode varchar(255),
+	specimenName varchar(255),
+	unit varchar(255),
+	c_value varchar(255),
+	laboModule_id bigint not null,
+	primary key (id))
+create table d_nlabo_module (
+	id bigint not null,
+	laboCenterCode varchar(255),
+	moduleKey varchar(255),
+	numOfItems varchar(255),
+	patientId varchar(255) not null,
+	patientName varchar(255),
+	patientSex varchar(255),
+	reportFormat varchar(255),
+	sampleDate varchar(255),
+	primary key (id))
+create table d_observation (
+	id bigint not null,
+	confirmed timestamp not null,
+	ended timestamp,
+	linkId bigint not null,
+	linkRelation varchar(255),
+	recorded timestamp not null,
+	started timestamp not null,
+	status varchar(1) not null,
+	categoryValue varchar(255),
+	memo varchar(255),
+	observation varchar(255) not null,
+	phenomenon varchar(255) not null,
+	unit varchar(255),
+	c_value varchar(255),
+	valueDesc varchar(255),
+	valueSys varchar(255),
+	creator_id bigint not null,
+	karte_id bigint not null,
+	primary key (id))
+create table d_oid (
+	id bigint not null,
+	baseOid varchar(255) not null,
+	nextNumber integer not null,
+	primary key (id))
+create table d_patient (
+	id bigint not null,
+	address varchar(255),
+	zipCode varchar(255),
+	birthday varchar(255),
+	email varchar(255),
+	facilityId varchar(255) not null,
+	familyName varchar(255),
+	fullName varchar(255) not null,
+	gender varchar(255) not null,
+	genderDesc varchar(255),
+	givenName varchar(255),
+	jpegPhoto blob,
+	kanaFamilyName varchar(255),
+	kanaGivenName varchar(255),
+	kanaName varchar(255),
+	maritalStatus varchar(255),
+	memo varchar(255),
+	mobilePhone varchar(255),
+	nationality varchar(255),
+	patientId varchar(255) not null,
+	romanFamilyName varchar(255),
+	romanGivenName varchar(255),
+	romanName varchar(255),
+	telephone varchar(255),
+	primary key (id))
+create table d_patient_memo (
+	id bigint not null,
+	confirmed timestamp not null,
+	ended timestamp,
+	linkId bigint not null,
+	linkRelation varchar(255),
+	recorded timestamp not null,
+	started timestamp not null,
+	status varchar(1) not null,
+	memo clob,
+	creator_id bigint not null,
+	karte_id bigint not null,
+	primary key (id))
+create table d_patient_visit (
+	id bigint not null,
+	department varchar(255),
+	deptCode varchar(255),
+	deptName varchar(255),
+	doctorId varchar(255),
+	doctorName varchar(255),
+	facilityId varchar(255) not null,
+	firstInsurance varchar(255),
+	insuranceUid varchar(255),
+	jmariNumber varchar(255),
+	memo varchar(255),
+	pvtDate varchar(255) not null,
+	status integer not null,
+	patient_id bigint not null,
+	primary key (id))
+create table d_published_tree (
+	id bigint not null,
+	category varchar(255) not null,
+	description varchar(255) not null,
+	lastUpdated date not null,
+	name varchar(255) not null,
+	partyName varchar(255) not null,
+	publishType varchar(255) not null,
+	publishedDate date not null,
+	treeBytes blob not null,
+	url varchar(255) not null,
+	user_id bigint not null,
+	primary key (id))
+create table d_radiology_method (
+	id integer not null,
+	hierarchyCode1 varchar(255),
+	hierarchyCode2 varchar(255),
+	methodName varchar(255),
+	primary key (id))
+create table d_roles (
+	id bigint not null,
+	c_role varchar(255) not null,
+	user_id varchar(255) not null,
+	c_user bigint not null,
+	primary key (id))
+create table d_stamp (
+	id varchar(255) not null,
+	entity varchar(255) not null,
+	stampBytes blob not null,
+	userId bigint not null,
+	primary key (id))
+create table d_stamp_tree (
+	id bigint not null,
+	category varchar(255),
+	description varchar(255),
+	lastUpdated date,
+	tree_name varchar(255) not null,
+	partyName varchar(255),
+	publishType varchar(255),
+	published varchar(255),
+	publishedDate date,
+	treeBytes blob not null,
+	url varchar(255),
+	user_id bigint not null,
+	primary key (id))
+create table d_subscribed_tree (
+	id bigint not null,
+	treeId bigint not null,
+	user_id bigint not null,
+	primary key (id))
+create table d_users (
+	id bigint not null,
+	commonName varchar(255) not null,
+	department varchar(255),
+	departmentCodeSys varchar(255),
+	departmentDesc varchar(255),
+	email varchar(255) not null,
+	givenName varchar(255),
+	license varchar(255),
+	licenseCodeSys varchar(255),
+	licenseDesc varchar(255),
+	memberType varchar(255) not null,
+	memo varchar(255),
+	orcaId varchar(255),
+	password varchar(255) not null,
+	registeredDate date not null,
+	sirName varchar(255),
+	userId varchar(255) not null unique,
+	facility_id bigint not null,
+	primary key (id))
+create table demo_disease (
+	id bigint not null,
+	disease varchar(255) not null,
+	primary key (id))
+create table demo_patient (
+	id bigint not null,
+	address varchar(255),
+	addressCode varchar(255),
+	age varchar(255),
+	birthday varchar(255),
+	carrier varchar(255),
+	email varchar(255),
+	kana varchar(255) not null,
+	marital varchar(255),
+	mobile varchar(255),
+	name varchar(255) not null,
+	sex varchar(255),
+	telephone varchar(255),
+	primary key (id))
+create table demo_rp (
+	id bigint not null,
+	name varchar(255) not null,
+	quantity varchar(255),
+	unit varchar(255),
+	primary key (id))
+alter table d_appo add constraint FKB00D2169C876DB65 foreign key (creator_id) references d_users
+alter table d_appo add constraint FKB00D2169518B8F23 foreign key (karte_id) references d_karte
+alter table d_composite_image add constraint FK87304BC8C876DB65 foreign key (creator_id) references d_users
+alter table d_composite_image add constraint FK87304BC8518B8F23 foreign key (karte_id) references d_karte
+alter table d_diagnosis add constraint FK17EF78D6C876DB65 foreign key (creator_id) references d_users
+alter table d_diagnosis add constraint FK17EF78D6518B8F23 foreign key (karte_id) references d_karte
+alter table d_document add constraint FKA5723296C876DB65 foreign key (creator_id) references d_users
+alter table d_document add constraint FKA5723296518B8F23 foreign key (karte_id) references d_karte
+alter table d_first_encounter add constraint FKCDC0A889C876DB65 foreign key (creator_id) references d_users
+alter table d_first_encounter add constraint FKCDC0A889518B8F23 foreign key (karte_id) references d_karte
+alter table d_health_insurance add constraint FKA82C17327A240DE0 foreign key (patient_id) references d_patient
+alter table d_image add constraint FK520631C0284DD309 foreign key (doc_id) references d_document
+alter table d_image add constraint FK520631C0C876DB65 foreign key (creator_id) references d_users
+alter table d_image add constraint FK520631C0518B8F23 foreign key (karte_id) references d_karte
+alter table d_karte add constraint FK521D2DB27A240DE0 foreign key (patient_id) references d_patient
+alter table d_labo_item add constraint FKBCC0729556E251D2 foreign key (specimen_id) references d_labo_specimen
+alter table d_labo_module add constraint FK94FAC56EC876DB65 foreign key (creator_id) references d_users
+alter table d_labo_module add constraint FK94FAC56E518B8F23 foreign key (karte_id) references d_karte
+alter table d_labo_specimen add constraint FKE642698AF71168CA foreign key (module_id) references d_labo_module
+alter table d_letter add constraint FKF376A861C876DB65 foreign key (creator_id) references d_users
+alter table d_letter add constraint FKF376A861518B8F23 foreign key (karte_id) references d_karte
+alter table d_letter_date add constraint FK1F6214CCBF208C27 foreign key (module_id) references d_letter_module
+alter table d_letter_item add constraint FK1F64A031BF208C27 foreign key (module_id) references d_letter_module
+alter table d_letter_module add constraint FKDF49FC0AC876DB65 foreign key (creator_id) references d_users
+alter table d_letter_module add constraint FKDF49FC0A518B8F23 foreign key (karte_id) references d_karte
+alter table d_letter_text add constraint FK1F696A4BBF208C27 foreign key (module_id) references d_letter_module
+alter table d_module add constraint FKF5B12AA7284DD309 foreign key (doc_id) references d_document
+alter table d_module add constraint FKF5B12AA7C876DB65 foreign key (creator_id) references d_users
+alter table d_module add constraint FKF5B12AA7518B8F23 foreign key (karte_id) references d_karte
+alter table d_nlabo_item add constraint FK25FB2EBDB2F72321 foreign key (laboModule_id) references d_nlabo_module
+alter table d_observation add constraint FKD65C0D1C876DB65 foreign key (creator_id) references d_users
+alter table d_observation add constraint FKD65C0D1518B8F23 foreign key (karte_id) references d_karte
+alter table d_patient_memo add constraint FK891F2A2FC876DB65 foreign key (creator_id) references d_users
+alter table d_patient_memo add constraint FK891F2A2F518B8F23 foreign key (karte_id) references d_karte
+alter table d_patient_visit add constraint FK9B46D6F67A240DE0 foreign key (patient_id) references d_patient
+alter table d_published_tree add constraint FK9A10A88A6D7AD766 foreign key (user_id) references d_users
+alter table d_roles add constraint FK5286172224A1537E foreign key (c_user) references d_users
+alter table d_stamp_tree add constraint FKD52C39556D7AD766 foreign key (user_id) references d_users
+alter table d_subscribed_tree add constraint FK12B516886D7AD766 foreign key (user_id) references d_users
+alter table d_users add constraint FK52B2166DA6188536 foreign key (facility_id) references d_facility
+create sequence hibernate_sequence start with 1 increment by 1
