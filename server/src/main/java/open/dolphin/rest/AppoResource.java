@@ -26,7 +26,7 @@ public final class AppoResource extends AbstractResource {
 
     @PUT
     @Consumes(MediaType.APPLICATION_XML)
-    @Produces("text/plain; charset=UTF=8")
+    @Produces("text/plain; charset=UTF-8")
     public String putXml(String repXml) {
 
         PlistParser parser = new PlistParser();

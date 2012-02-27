@@ -28,7 +28,7 @@ public final class PVTResource extends AbstractResource {
 
     @GET
     @Path("{param}/")
-    @Produces("application/xml; charset=UTF=8")
+    @Produces("application/xml; charset=UTF-8")
     public String getPvt(@Context HttpServletRequest servletReq, @PathParam("param") String param) {
 
         // 施設
@@ -64,7 +64,7 @@ public final class PVTResource extends AbstractResource {
 
     @POST
     @Consumes(MediaType.APPLICATION_XML)
-    @Produces("text/plain; charset=UTF=8")
+    @Produces("text/plain; charset=UTF-8")
     public String postPvt(@Context HttpServletRequest servletReq, String repXml) {
 
         PlistParser parser = new PlistParser();
@@ -92,7 +92,7 @@ public final class PVTResource extends AbstractResource {
     
     @PUT
     @Path("{param}/")
-    @Produces("text/plain; charset=UTF=8")
+    @Produces("text/plain; charset=UTF-8")
     public String putPvtState(@PathParam("param") String param) {
         
         String[] params = param.split(CAMMA);
@@ -108,7 +108,7 @@ public final class PVTResource extends AbstractResource {
 
     @PUT
     @Path("memo/{param}/")
-    @Produces("text/plain; charset=UTF=8")
+    @Produces("text/plain; charset=UTF-8")
     public String putMemo(@PathParam("param") String param) {
 
         String[] params = param.split(CAMMA);

@@ -26,7 +26,7 @@ public final class StampResource extends AbstractResource {
 
     @GET
     @Path("id/{param}/")
-    @Produces("application/xml; charset=UTF=8")
+    @Produces("application/xml; charset=UTF-8")
     public String getStamp(@PathParam("param") String param) {
         StampModel stamp = EJBLocator.getStampServiceBean().getStamp(param);
         PlistConverter con = new PlistConverter();
@@ -38,7 +38,7 @@ public final class StampResource extends AbstractResource {
     
     @GET
     @Path("list/{param}/")
-    @Produces("application/xml; charset=UTF=8")
+    @Produces("application/xml; charset=UTF-8")
     public String getStamps(@PathParam("param") String param) {
         
         String[] params = param.split(CAMMA);
@@ -58,7 +58,7 @@ public final class StampResource extends AbstractResource {
     @PUT
     @Path("id/")
     @Consumes(MediaType.APPLICATION_XML)
-    @Produces("text/plain; charset=UTF=8")
+    @Produces("text/plain; charset=UTF-8")
     public String putStamp(String repXml) {
 
         PlistParser parser = new PlistParser();
@@ -74,7 +74,7 @@ public final class StampResource extends AbstractResource {
     @PUT
     @Path("list/")
     @Consumes(MediaType.APPLICATION_XML)
-    @Produces("text/plain; charset=UTF=8")
+    @Produces("text/plain; charset=UTF-8")
     public String putStamps(String repXml) {
 
         PlistParser parser = new PlistParser();

@@ -27,7 +27,7 @@ public final class UserResource extends AbstractResource {
 
     @GET
     @Path("{userId}/")
-    @Produces("application/xml; charset=UTF=8")
+    @Produces("application/xml; charset=UTF-8")
     public String getUser(@PathParam("userId") String userId) {
 
         UserModel result = EJBLocator.getUserServiceBean().getUser(userId);
@@ -41,7 +41,7 @@ public final class UserResource extends AbstractResource {
 
     
     @GET
-    @Produces("application/xml; charset=UTF=8")
+    @Produces("application/xml; charset=UTF-8")
     public String getAllUser(@Context HttpServletRequest servletReq) {
         
         String fid = getRemoteFacility(servletReq.getRemoteUser());
@@ -59,7 +59,7 @@ public final class UserResource extends AbstractResource {
 
     @POST
     @Consumes(MediaType.APPLICATION_XML)
-    @Produces("text/plain; charset=UTF=8")
+    @Produces("text/plain; charset=UTF-8")
     public String postUser(@Context HttpServletRequest servletReq, String repXml) {
 
         String fid = getRemoteFacility(servletReq.getRemoteUser());
@@ -85,7 +85,7 @@ public final class UserResource extends AbstractResource {
 
     @PUT
     @Consumes(MediaType.APPLICATION_XML)
-    @Produces("text/plain; charset=UTF=8")
+    @Produces("text/plain; charset=UTF-8")
     public String putUser(String repXml) {
 
         PlistParser parser = new PlistParser();
@@ -118,7 +118,7 @@ public final class UserResource extends AbstractResource {
     @PUT
     @Path("facility/")
     @Consumes(MediaType.APPLICATION_XML)
-    @Produces("text/plain; charset=UTF=8")
+    @Produces("text/plain; charset=UTF-8")
     public String putFacility(String repXml) {
 
         PlistParser parser = new PlistParser();
