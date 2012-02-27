@@ -12,7 +12,7 @@
   </filter>
   <filter-mapping>
     <filter-name>LogFilter</filter-name>
-    <servlet-name>ServletAdaptor</servlet-name>
+    <url-pattern>/openSource/*</url-pattern>
   </filter-mapping>
 
   <servlet-mapping>
