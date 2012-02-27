@@ -30,7 +30,7 @@ public final class StampTreeResource extends AbstractResource {
 
     @GET
     @Path("{userPK}/")
-    @Produces(MediaType.APPLICATION_XML)
+    @Produces("application/xml; charset=UTF=8")
     public String getStampTree(@PathParam("userPK") String userPK) {
 
         List<IStampTreeModel> result = EJBLocator.getStampServiceBean().getTrees(Long.parseLong(userPK));
@@ -45,7 +45,7 @@ public final class StampTreeResource extends AbstractResource {
 
     @PUT
     @Consumes(MediaType.APPLICATION_XML)
-    @Produces(MediaType.TEXT_PLAIN)
+    @Produces("text/plain; charset=UTF=8")
     public String putTree(String repXml) {
 
         PlistParser parser = new PlistParser();
@@ -62,7 +62,7 @@ public final class StampTreeResource extends AbstractResource {
     @POST
     @Path("published/")
     @Consumes(MediaType.APPLICATION_XML)
-    @Produces(MediaType.TEXT_PLAIN)
+    @Produces("text/plain; charset=UTF=8")
     public String postPublishedTree(String repXml) {
 
         PlistParser parser = new PlistParser();
@@ -79,7 +79,7 @@ public final class StampTreeResource extends AbstractResource {
     @PUT
     @Path("published/")
     @Consumes(MediaType.APPLICATION_XML)
-    @Produces(MediaType.TEXT_PLAIN)
+    @Produces("text/plain; charset=UTF=8")
     public String putPublishedTree(String repXml) {
 
         PlistParser parser = new PlistParser();
@@ -110,7 +110,7 @@ public final class StampTreeResource extends AbstractResource {
 
     @GET
     @Path("published/")
-    @Produces(MediaType.APPLICATION_XML)
+    @Produces("application/xml; charset=UTF=8")
     public String getPublishedTrees(@Context HttpServletRequest servletReq) {
 
         String fid = getRemoteFacility(servletReq.getRemoteUser());
@@ -127,7 +127,7 @@ public final class StampTreeResource extends AbstractResource {
     @PUT
     @Path("subscribed/")
     @Consumes(MediaType.APPLICATION_XML)
-    @Produces(MediaType.TEXT_PLAIN)
+    @Produces("text/plain; charset=UTF=8")
     public String subscribeTrees(String repXml) {
         
         PlistParser parser = new PlistParser();

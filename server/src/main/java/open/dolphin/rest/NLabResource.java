@@ -29,7 +29,7 @@ public final class NLabResource extends AbstractResource {
 
     @GET
     @Path("module/{param}/")
-    @Produces(MediaType.APPLICATION_XML)
+    @Produces("application/xml; charset=UTF=8")
     public String getLaboTest(@Context HttpServletRequest servletReq, @PathParam("param") String param) {
 
         debug(param);
@@ -51,7 +51,7 @@ public final class NLabResource extends AbstractResource {
 
     @GET
     @Path("item/{param}/")
-    @Produces(MediaType.APPLICATION_XML)
+    @Produces("application/xml; charset=UTF=8")
     public String getLaboTestItem(@Context HttpServletRequest servletReq, @PathParam("param") String param) {
 
         debug(param);
@@ -74,7 +74,7 @@ public final class NLabResource extends AbstractResource {
 
     @GET
     @Path("patient/{param}")
-    @Produces(MediaType.APPLICATION_XML)
+    @Produces("application/xml; charset=UTF=8")
     public String getConstrainedPatients(@Context HttpServletRequest servletReq, @PathParam("param") String param) {
 
         String fid = getRemoteFacility(servletReq.getRemoteUser());
@@ -96,7 +96,7 @@ public final class NLabResource extends AbstractResource {
     @POST
     @Path("module/")
     @Consumes(MediaType.APPLICATION_XML)
-    @Produces(MediaType.APPLICATION_XML)
+    @Produces("application/xml; charset=UTF=8")
     public String postNLaboTest(@Context HttpServletRequest servletReq, String repXml) {
 
         String fid = getRemoteFacility(servletReq.getRemoteUser());

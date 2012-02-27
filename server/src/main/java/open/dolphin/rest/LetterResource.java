@@ -24,7 +24,7 @@ public final class LetterResource extends AbstractResource {
     @PUT
     @Path("letter/")
     @Consumes(MediaType.APPLICATION_XML)
-    @Produces(MediaType.TEXT_PLAIN)
+    @Produces("text/plain; charset=UTF=8")
     public String putLetter(String repXml) {
 
         PlistParser parser = new PlistParser();
@@ -40,7 +40,7 @@ public final class LetterResource extends AbstractResource {
 
     @GET
     @Path("list/{param}/")
-    @Produces(MediaType.APPLICATION_XML)
+    @Produces("application/xml; charset=UTF=8")
     public String getLetterList(@PathParam("param") String param) {
 
         debug(param);
@@ -59,7 +59,7 @@ public final class LetterResource extends AbstractResource {
 
     @GET
     @Path("letter/{param}/")
-    @Produces(MediaType.APPLICATION_XML)
+    @Produces("application/xml; charset=UTF=8")
     public String getLetter(@PathParam("param") String param) {
 
         long pk = Long.parseLong(param);

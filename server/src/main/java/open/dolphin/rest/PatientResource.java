@@ -27,7 +27,7 @@ public final class PatientResource extends AbstractResource {
 
     @GET
     @Path("name/{param}/")
-    @Produces(MediaType.APPLICATION_XML)
+    @Produces("application/xml; charset=UTF=8")
     public String getPatientsByName(@Context HttpServletRequest servletReq, @PathParam("param") String param) {
 
         String fid = getRemoteFacility(servletReq.getRemoteUser());
@@ -45,7 +45,7 @@ public final class PatientResource extends AbstractResource {
 
     @GET
     @Path("kana/{param}/")
-    @Produces(MediaType.APPLICATION_XML)
+    @Produces("application/xml; charset=UTF=8")
     public String getPatientsByKana(@Context HttpServletRequest servletReq, @PathParam("param") String param) {
 
         String fid = getRemoteFacility(servletReq.getRemoteUser());
@@ -63,7 +63,7 @@ public final class PatientResource extends AbstractResource {
 
     @GET
     @Path("digit/{param}/")
-    @Produces(MediaType.APPLICATION_XML)
+    @Produces("application/xml; charset=UTF=8")
     public String getPatientsByDigit(@Context HttpServletRequest servletReq, @PathParam("param") String param) {
 
         String fid = getRemoteFacility(servletReq.getRemoteUser());
@@ -83,7 +83,7 @@ public final class PatientResource extends AbstractResource {
 
     @GET
     @Path("id/{param}/")
-    @Produces(MediaType.APPLICATION_XML)
+    @Produces("application/xml; charset=UTF=8")
     public String getPatientById(@Context HttpServletRequest servletReq, @PathParam("param") String param) {
 
         String fid = getRemoteFacility(servletReq.getRemoteUser());
@@ -100,7 +100,7 @@ public final class PatientResource extends AbstractResource {
 
     @GET
     @Path("pvt/{param}/")
-    @Produces(MediaType.APPLICATION_XML)
+    @Produces("application/xml; charset=UTF=8")
     public String getPatientsByPvt(@Context HttpServletRequest servletReq, @PathParam("param") String param) {
 
         String fid = getRemoteFacility(servletReq.getRemoteUser());
@@ -118,7 +118,7 @@ public final class PatientResource extends AbstractResource {
 
     @POST
     @Consumes(MediaType.APPLICATION_XML)
-    @Produces(MediaType.TEXT_PLAIN)
+    @Produces("text/plain; charset=UTF=8")
     public String postPatient(@Context HttpServletRequest servletReq, String xmlRep) {
 
         String fid = getRemoteFacility(servletReq.getRemoteUser());
@@ -137,7 +137,7 @@ public final class PatientResource extends AbstractResource {
 
     @PUT
     @Consumes(MediaType.APPLICATION_XML)
-    @Produces(MediaType.TEXT_PLAIN)
+    @Produces("text/plain; charset=UTF=8")
     public String putPatient(@Context HttpServletRequest servletReq, String xmlRep) {
 
         String fid = getRemoteFacility(servletReq.getRemoteUser());

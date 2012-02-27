@@ -27,7 +27,7 @@ public final class KarteResource extends AbstractResource {
 
     @GET
     @Path("pid/{param}/")
-    @Produces(MediaType.APPLICATION_XML)
+    @Produces("application/xml; charset=UTF=8")
     public String getKarteByPid(@Context HttpServletRequest servletReq, @PathParam("param") String param) {
 
         debug(param);
@@ -48,7 +48,7 @@ public final class KarteResource extends AbstractResource {
 
     @GET
     @Path("{param}/")
-    @Produces(MediaType.APPLICATION_XML)
+    @Produces("application/xml; charset=UTF=8")
     public String getKarte(@PathParam("param") String param) {
 
         debug(param);
@@ -69,7 +69,7 @@ public final class KarteResource extends AbstractResource {
 
     @GET
     @Path("docinfo/{param}/")
-    @Produces(MediaType.APPLICATION_XML)
+    @Produces("application/xml; charset=UTF=8")
     public String getDocumentList(@PathParam("param") String param) {
 
         debug(param);
@@ -90,7 +90,7 @@ public final class KarteResource extends AbstractResource {
 
     @GET
     @Path("documents/{param}/")
-    @Produces(MediaType.APPLICATION_XML)
+    @Produces("application/xml; charset=UTF=8")
     public String getDocuments(@PathParam("param") String param) {
 
         debug(param);
@@ -113,7 +113,7 @@ public final class KarteResource extends AbstractResource {
     @POST
     @Path("document/")
     @Consumes(MediaType.APPLICATION_XML)
-    @Produces(MediaType.TEXT_PLAIN)
+    @Produces("text/plain; charset=UTF=8")
     public String postDocument(String repXml) {
 
         PlistParser parser = new PlistParser();
@@ -143,7 +143,7 @@ public final class KarteResource extends AbstractResource {
     @POST
     @Path("document/pvt/{params}")
     @Consumes(MediaType.APPLICATION_XML)
-    @Produces(MediaType.TEXT_PLAIN)
+    @Produces("text/plain; charset=UTF=8")
     public String postDocument(@PathParam("params") String param, String repXml) {
 
         String[] params = param.split(CAMMA);
@@ -192,7 +192,7 @@ public final class KarteResource extends AbstractResource {
     @PUT
     @Path("document/{id}")
     @Consumes(MediaType.TEXT_PLAIN)
-    @Produces(MediaType.TEXT_PLAIN)
+    @Produces("text/plain; charset=UTF=8")
     public String putTitle(@PathParam("id") String idStr, String title) {
 
         long id = Long.parseLong(idStr);
@@ -218,7 +218,7 @@ public final class KarteResource extends AbstractResource {
 
     @GET
     @Path("modules/{param}/")
-    @Produces(MediaType.APPLICATION_XML)
+    @Produces("application/xml; charset=UTF=8")
     public String getModules(@PathParam("param") String param) {
 
         debug(param);
@@ -247,7 +247,7 @@ public final class KarteResource extends AbstractResource {
 
     @GET
     @Path("iamges/{param}/")
-    @Produces(MediaType.APPLICATION_XML)
+    @Produces("application/xml; charset=UTF=8")
     public String getImages(@PathParam("param") String param) {
 
         debug(param);
@@ -275,7 +275,7 @@ public final class KarteResource extends AbstractResource {
 
     @GET
     @Path("image/{id}/")
-    @Produces(MediaType.APPLICATION_XML)
+    @Produces("application/xml; charset=UTF=8")
     public String getImage(@PathParam("param") String idStr) {
 
         debug(idStr);
@@ -294,7 +294,7 @@ public final class KarteResource extends AbstractResource {
 
     @GET
     @Path("diagnosis/{param}/")
-    @Produces(MediaType.APPLICATION_XML)
+    @Produces("application/xml; charset=UTF=8")
     public String getDiagnosis(@PathParam("param") String param) {
 
         debug(param);
@@ -318,7 +318,7 @@ public final class KarteResource extends AbstractResource {
     @POST
     @Path("diagnosis/")
     @Consumes(MediaType.APPLICATION_XML)
-    @Produces(MediaType.TEXT_PLAIN)
+    @Produces("text/plain; charset=UTF=8")
     public String postDiagnosis(String repXml) {
         
         PlistParser parser = new PlistParser();
@@ -341,7 +341,7 @@ public final class KarteResource extends AbstractResource {
     @PUT
     @Path("diagnosis/")
     @Consumes(MediaType.APPLICATION_XML)
-    @Produces(MediaType.TEXT_PLAIN)
+    @Produces("text/plain; charset=UTF=8")
     public String putDiagnosis(String repXml) {
 
         PlistParser parser = new PlistParser();
@@ -375,7 +375,7 @@ public final class KarteResource extends AbstractResource {
 
     @GET
     @Path("observations/{param}/")
-    @Produces(MediaType.APPLICATION_XML)
+    @Produces("application/xml; charset=UTF=8")
     public String getObservations(@PathParam("param") String param) {
 
         debug(param);
@@ -400,7 +400,7 @@ public final class KarteResource extends AbstractResource {
     @POST
     @Path("observations/")
     @Consumes(MediaType.APPLICATION_XML)
-    @Produces(MediaType.TEXT_PLAIN)
+    @Produces("text/plain; charset=UTF=8")
     public String postObservations(String repXml) {
         
         PlistParser parser = new PlistParser();
@@ -423,7 +423,7 @@ public final class KarteResource extends AbstractResource {
     @PUT
     @Path("observations/")
     @Consumes(MediaType.APPLICATION_XML)
-    @Produces(MediaType.TEXT_PLAIN)
+    @Produces("text/plain; charset=UTF=8")
     public String putObservations(String repXml) {
         
         PlistParser parser = new PlistParser();
@@ -458,7 +458,7 @@ public final class KarteResource extends AbstractResource {
     @PUT
     @Path("memo/")
     @Consumes(MediaType.APPLICATION_XML)
-    @Produces(MediaType.TEXT_PLAIN)
+    @Produces("text/plain; charset=UTF=8")
     public String putPatientMemo(String repXml) {
         
         PlistParser parser = new PlistParser();
@@ -477,7 +477,7 @@ public final class KarteResource extends AbstractResource {
     @PUT
     @Path("letter/")
     @Consumes(MediaType.APPLICATION_XML)
-    @Produces(MediaType.TEXT_PLAIN)
+    @Produces("text/plain; charset=UTF=8")
     public String putLetter(String repXml) {
 
         PlistParser parser = new PlistParser();
@@ -493,7 +493,7 @@ public final class KarteResource extends AbstractResource {
 
     @GET
     @Path("letter/{param}/")
-    @Produces(MediaType.APPLICATION_XML)
+    @Produces("application/xml; charset=UTF=8")
     public String getLetter(@PathParam("param") String param) {
 
         long pk = Long.parseLong(param);
@@ -508,7 +508,7 @@ public final class KarteResource extends AbstractResource {
 
     @GET
     @Path("reply/{param}/")
-    @Produces(MediaType.APPLICATION_XML)
+    @Produces("application/xml; charset=UTF=8")
     public String getLetterReply(@PathParam("param") String param) {
 
         long pk = Long.parseLong(param);
@@ -526,7 +526,7 @@ public final class KarteResource extends AbstractResource {
 
     @GET
     @Path("appo/{param}/")
-    @Produces(MediaType.APPLICATION_XML)
+    @Produces("application/xml; charset=UTF=8")
     public String getAppoinmentList(@PathParam("param") String param) {
 
         debug(param);
